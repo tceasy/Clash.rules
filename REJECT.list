@@ -1,4 +1,3 @@
- 
 # Reject list from V2TUN
 DOMAIN-KEYWORD,adservice,REJECT
 DOMAIN,ad.51wnl-cq.com,REJECT
