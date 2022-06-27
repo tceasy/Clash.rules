@@ -13,6 +13,21 @@ DOMAIN-SUFFIX,disco-api.com
 DOMAIN-SUFFIX,discovery.com
 DOMAIN-SUFFIX,uplynk.com
 
+# FoxNow
+USER-AGENT,FOX%20NOW*
+DOMAIN-SUFFIX,fox.com
+DOMAIN-SUFFIX,foxdcg.com
+DOMAIN-SUFFIX,config.fox.com
+DOMAIN-SUFFIX,emome.net
+DOMAIN-SUFFIX,foxnow.com
+DOMAIN-SUFFIX,foxplus.com
+DOMAIN-SUFFIX,foxplay.com
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,mstage.io
+DOMAIN-SUFFIX,now.com
+DOMAIN-SUFFIX,theplatform.com
+DOMAIN-SUFFIX,urlload.net
+
 # Pornhub
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
