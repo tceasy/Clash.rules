@@ -4,6 +4,7 @@ USER-AGENT,com.apple.news*
 DOMAIN,gspe1-ssl.ls.apple.com
 
 # AppleTV
+DOMAIN,linear.tv.apple.com
 DOMAIN,np-edge.itunes.apple.com
 DOMAIN,play-edge.itunes.apple.com
 DOMAIN-SUFFIX,tv.apple.com
@@ -11,7 +12,9 @@ DOMAIN-SUFFIX,tv.apple.com
 # DiscoveryPlus
 DOMAIN-SUFFIX,disco-api.com
 DOMAIN-SUFFIX,discovery.com
+DOMAIN-SUFFIX,discoveryplus.com
 DOMAIN-SUFFIX,uplynk.com
+PROCESS-NAME,com.discovery.discoveryplus.mobile
 
 # FoxNow
 USER-AGENT,FOX%20NOW*
