@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,qupu123.com
 DOMAIN-SUFFIX,pdfwifi.com
 DOMAIN-SUFFIX,zhenguanyu.biz
 DOMAIN-SUFFIX,zhenguanyu.com
+PROCESS-NAME,mailbird.exe
 
 #EMAIL	
 DST-PORT,25
