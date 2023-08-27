@@ -45,7 +45,6 @@ DOMAIN-KEYWORD,gmail
 DOMAIN-KEYWORD,instagram
 DOMAIN-KEYWORD,sci-hub
 DOMAIN-KEYWORD,spotify
-DOMAIN-KEYWORD,telegram
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,whatsapp
 
@@ -4747,10 +4746,6 @@ DOMAIN-SUFFIX,teensinasia.com
 DOMAIN-SUFFIX,tehrantimes.com
 DOMAIN-SUFFIX,telecomspace.com
 DOMAIN-SUFFIX,telegra.ph
-DOMAIN-SUFFIX,telegram.dog
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,telegramdownload.com
 DOMAIN-SUFFIX,telegraph.co.uk
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,tellme.pw
@@ -6028,14 +6023,6 @@ DOMAIN-SUFFIX,taptap.tw
 # Twitter
 DOMAIN-SUFFIX,twimg.co
 DOMAIN-SUFFIX,twimg.org
-
-# Telegram
-IP-CIDR,91.108.0.0/16,no-resolve
-IP-CIDR,109.239.140.0/24,no-resolve
-IP-CIDR,149.154.160.0/20,no-resolve
-IP-CIDR6,2001:67c:4e8::/48,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,no-resolve
 
 # TeraBox
 DOMAIN-SUFFIX,teraboxcdn.com
