@@ -2196,8 +2196,6 @@ DOMAIN-SUFFIX,google.vg
 DOMAIN-SUFFIX,google.vn
 DOMAIN-SUFFIX,google.vu
 DOMAIN-SUFFIX,google.ws
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleapps.com
 DOMAIN-SUFFIX,googlearth.com
 DOMAIN-SUFFIX,googleartproject.com
@@ -3873,7 +3871,6 @@ DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pixnet.in
 DOMAIN-SUFFIX,pixnet.net
 DOMAIN-SUFFIX,pk.com
-DOMAIN-SUFFIX,pki.goog
 DOMAIN-SUFFIX,placemix.com
 DOMAIN-SUFFIX,playboy.com
 DOMAIN-SUFFIX,playboyplus.com
