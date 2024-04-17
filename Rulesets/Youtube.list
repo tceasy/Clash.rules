@@ -184,6 +184,7 @@ DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,pki.goog
+DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN,mtalk.google.com
 DOMAIN,youtubei.googleapis.com
 DOMAIN,yt3.ggpht.com
