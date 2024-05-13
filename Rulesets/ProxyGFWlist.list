@@ -1,5 +1,6 @@
 # MyList && Other
 DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,btlibrary.me
 DOMAIN-SUFFIX,cloudcone.com
@@ -16,7 +17,6 @@ DOMAIN-SUFFIX,teddysun.com
 DOMAIN-SUFFIX,tumbex.com
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
-
 
 # 国外域名
 DOMAIN-SUFFIX,eu
