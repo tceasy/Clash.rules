@@ -18,6 +18,12 @@ DOMAIN-SUFFIX,tumbex.com
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
 
+# Aladdin Network Dynamic Domains
+DOMAIN-SUFFIX,avatargpt.xyz
+DOMAIN-SUFFIX,adelegpt.xyz
+DOMAIN-SUFFIX,alphasgpt.xyz
+DOMAIN-SUFFIX,romeogpt.xyz
+
 # 国外域名
 DOMAIN-SUFFIX,eu
 DOMAIN-SUFFIX,hk
