@@ -7,7 +7,10 @@ DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
 DOMAIN-SUFFIX,qupu123.com
 DOMAIN-SUFFIX,delldisplaymanagerwindows.com
+DOMAIN-SUFFIX,parsec.app
+DOMAIN-SUFFIX,parsecusercontent
 PROCESS-NAME,mailbird.exe
+PROCESS-NAME,parsec
 
 #EMAIL	
 DST-PORT,25
