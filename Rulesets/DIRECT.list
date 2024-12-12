@@ -1,6 +1,8 @@
 # 直连列表
 
 # MyList
+DOMAIN,api.trakt.tv
+DOMAIN,ehk1.cn2gias.uk
 DOMAIN-SUFFIX,chinaplay.store
 DOMAIN-SUFFIX,hrtsea.com
 DOMAIN-SUFFIX,laomo.me
@@ -9,8 +11,6 @@ DOMAIN-SUFFIX,qupu123.com
 DOMAIN-SUFFIX,delldisplaymanagerwindows.com
 DOMAIN-SUFFIX,parsec.app
 DOMAIN-SUFFIX,parsecusercontent
-DOMAIN-SUFFIX,api.trakt.tv
-DOMAIN-SUFFIX,ehk1.cn2gias.uk
 DOMAIN-SUFFIX,ubits.club
 PROCESS-NAME,mailbird.exe
 PROCESS-NAME,parsec
