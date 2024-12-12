@@ -3,7 +3,6 @@
 # MyList
 DOMAIN,api.trakt.tv
 DOMAIN-SUFFIX,chinaplay.store
-DOMAIN-SUFFIX,hrtsea.com
 DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
 DOMAIN-SUFFIX,qupu123.com
@@ -152,16 +151,6 @@ DOMAIN-KEYWORD,vpimg
 DOMAIN-KEYWORD,xiami
 DOMAIN-KEYWORD,xiaomi
 
-# 360
-DOMAIN-SUFFIX,360.com
-DOMAIN-SUFFIX,360kuai.com
-DOMAIN-SUFFIX,360safe.com
-DOMAIN-SUFFIX,dhrest.com
-DOMAIN-SUFFIX,qhres.com
-DOMAIN-SUFFIX,qhstatic.com
-DOMAIN-SUFFIX,qhupdate.com
-DOMAIN-SUFFIX,so.com
-
 # 4399
 DOMAIN-SUFFIX,4399.com
 DOMAIN-SUFFIX,4399pk.com
@@ -239,11 +228,6 @@ DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,hdslb.com
 DOMAIN-SUFFIX,im9.com
 DOMAIN-SUFFIX,smtcdns.net
-
-# Blizzard
-DOMAIN-SUFFIX,battle.net
-DOMAIN-SUFFIX,battlenet.com
-DOMAIN-SUFFIX,blizzard.com
 
 # ByteDance
 DOMAIN-SUFFIX,amemv.com
@@ -522,16 +506,14 @@ DOMAIN-SUFFIX,awesome-hd.me
 DOMAIN-SUFFIX,beitai.pt
 DOMAIN-SUFFIX,bittorrent.com
 DOMAIN-SUFFIX,broadcasthe.net
+DOMAIN-SUFFIX,btschool.club
 DOMAIN-SUFFIX,chdbits.co
 DOMAIN-SUFFIX,classix-unlimited.co.uk
-DOMAIN-SUFFIX,empornium.me
 DOMAIN-SUFFIX,gazellegames.net
-DOMAIN-SUFFIX,hd4fans.org
 DOMAIN-SUFFIX,hdchina.org
 DOMAIN-SUFFIX,hdhome.org
 DOMAIN-SUFFIX,hdsky.me
 DOMAIN-SUFFIX,hdtime.org
-DOMAIN-SUFFIX,hdzone.me
 DOMAIN-SUFFIX,icetorrent.org
 DOMAIN-SUFFIX,jpopsuki.eu
 DOMAIN-SUFFIX,keepfrds.com
@@ -547,10 +529,13 @@ DOMAIN-SUFFIX,passthepopcorn.me
 DOMAIN-SUFFIX,privatehd.to
 DOMAIN-SUFFIX,pthome.net
 DOMAIN-SUFFIX,redacted.ch
+DOMAIN-SUFFIX,rousi.zip
 DOMAIN-SUFFIX,springsunday.net
+DOMAIN-SUFFIX,soulvoice.club
 DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
 DOMAIN-SUFFIX,trontv.com
+DOMAIN-SUFFIX,ubits.club
 
 # TeamViewer
 DOMAIN-SUFFIX,teamviewer.com
