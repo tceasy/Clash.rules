@@ -1,7 +1,6 @@
 # 直连列表
 
 # MyList
-DOMAIN,api.trakt.tv
 DOMAIN-SUFFIX,chinaplay.store
 DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
