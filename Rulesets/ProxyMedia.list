@@ -4,10 +4,15 @@ USER-AGENT,com.apple.news*
 DOMAIN,gspe1-ssl.ls.apple.com
 
 # AppleTV
+DOMAIN-SUFFIX,tv.apple.com
+DOMAIN,hls-amt.itunes.apple.com
+DOMAIN,hls.itunes.apple.com
 DOMAIN,linear.tv.apple.com
 DOMAIN,np-edge.itunes.apple.com
 DOMAIN,play-edge.itunes.apple.com
-DOMAIN-SUFFIX,tv.apple.com
+DOMAIN,tv.applemusic.com
+DOMAIN,uts-api.itunes.apple.com
+PROCESS-NAME,TV
 
 # DiscoveryPlus
 DOMAIN-SUFFIX,disco-api.com
@@ -36,6 +41,19 @@ DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,pornhubpremium.com
+
+# Porn
+DOMAIN-KEYWORD,porn
+DOMAIN-SUFFIX,8teenxxx.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,t66y.com
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,xnxx-cdn.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+DOMAIN-SUFFIX,xvideos.com
 
 # TikTok
 USER-AGENT,TikTok*
