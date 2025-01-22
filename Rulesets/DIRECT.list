@@ -198,6 +198,7 @@ DOMAIN-SUFFIX,xiami.com
 DOMAIN-SUFFIX,xiami.net
 DOMAIN-SUFFIX,ykimg.com
 DOMAIN-SUFFIX,youku.com
+DOMAIN-SUFFIX,fliggy.com
 
 # Baidu
 DOMAIN-SUFFIX,baidu.com
@@ -336,6 +337,10 @@ DOMAIN-SUFFIX,jdbusiness.com
 DOMAIN-SUFFIX,jdcloud.com
 DOMAIN-SUFFIX,jdpay.com
 DOMAIN-SUFFIX,paipai.com
+DOMAIN-SUFFIX,yiyaojd.com
+DOMAIN-SUFFIX,7fresh.com
+DOMAIN-SUFFIX,healthjd.com
+DOMAIN-SUFFIX,jingxi.com
 
 # Kingsoft
 DOMAIN-SUFFIX,iciba.com
@@ -480,23 +485,6 @@ DOMAIN-SUFFIX,p2cdn.com
 DOMAIN-SUFFIX,sandai.net
 DOMAIN-SUFFIX,thundercdn.com
 DOMAIN-SUFFIX,xunlei.com
-
-# YYeTs 人人影视
-DOMAIN-SUFFIX,got001.com
-DOMAIN-SUFFIX,p4pfile.com
-DOMAIN-SUFFIX,rrys.tv
-DOMAIN-SUFFIX,rrys2020.com
-DOMAIN-SUFFIX,yyets.com
-DOMAIN-SUFFIX,zimuzu.io
-DOMAIN-SUFFIX,zimuzu.tv
-DOMAIN-SUFFIX,zmz001.com
-DOMAIN-SUFFIX,zmz002.com
-DOMAIN-SUFFIX,zmz003.com
-DOMAIN-SUFFIX,zmz004.com
-DOMAIN-SUFFIX,zmz2019.com
-DOMAIN-SUFFIX,zmzapi.com
-DOMAIN-SUFFIX,zmzapi.net
-DOMAIN-SUFFIX,zmzfile.com
 
 # Private Tracker
 DOMAIN-KEYWORD,announce
