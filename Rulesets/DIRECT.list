@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,infinitynewtab.com
 DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,parsec.app
 DOMAIN-SUFFIX,parsecusercontent
+DOMAIN-SUFFIX,pianyuan.org
 PROCESS-NAME,mailbird.exe
 PROCESS-NAME,parsec
 
