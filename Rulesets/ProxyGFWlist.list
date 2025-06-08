@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,btlibrary.me
 DOMAIN-SUFFIX,cloudcone.com
+DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,gameloft.com
 DOMAIN-SUFFIX,hoyolab.com
 DOMAIN-SUFFIX,inoreader.com
@@ -13,11 +14,11 @@ DOMAIN-SUFFIX,myteamspeak.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,sntp.uk
 DOMAIN-SUFFIX,teddysun.com
 DOMAIN-SUFFIX,tumbex.com
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
-DOMAIN-SUFFIX,sntp.uk
 
 # 国外域名关键字
 DOMAIN-KEYWORD,1e100
