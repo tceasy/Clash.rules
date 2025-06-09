@@ -13,7 +13,6 @@ DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,myteamspeak.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,ping.pe
-DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,sntp.uk
 DOMAIN-SUFFIX,teddysun.com
 DOMAIN-SUFFIX,tumbex.com
@@ -104,10 +103,8 @@ DOMAIN-SUFFIX,kobo.com
 DOMAIN-SUFFIX,kobobooks.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIX,livefilestore.com
 DOMAIN-SUFFIX,llnwd.net
 DOMAIN-SUFFIX,macrumors.com
-DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,mega.nz
 DOMAIN-SUFFIX,megaupload.com
 DOMAIN-SUFFIX,messenger.com
@@ -213,7 +210,6 @@ DOMAIN-SUFFIX,maven.org
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,mvnrepository.com
 DOMAIN-SUFFIX,quay.io
-DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redhat.com
 DOMAIN-SUFFIX,sonatype.org
 DOMAIN-SUFFIX,sourcegraph.com
