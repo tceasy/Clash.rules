@@ -12,3 +12,15 @@ DOMAIN-SUFFIX,venmo.com
 DOMAIN-SUFFIX,bimmerpost.com
 DOMAIN-SUFFIX,riotgames.com
 DOMAIN-SUFFIX,proton.me
+
+# NAME: Reddit
+# UPDATED: 2025-06-06 09:17:47
+# TOTAL: 8
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmail.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,reddituploads.com
+DOMAIN-SUFFIX,reddituploads.com.cdn-cf.behance.net
+DOMAIN-SUFFIX,reddituploads.com.cdn-cf.dropbox.com
