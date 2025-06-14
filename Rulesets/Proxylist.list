@@ -2,15 +2,12 @@
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,adguard.org
-DOMAIN-SUFFIX,btlibrary.me
 DOMAIN-SUFFIX,cloudcone.com
 DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,gameloft.com
 DOMAIN-SUFFIX,hoyolab.com
-DOMAIN-SUFFIX,inoreader.com
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,linkedin.com
-DOMAIN-SUFFIX,myteamspeak.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,sntp.uk
@@ -33,7 +30,6 @@ DOMAIN-KEYWORD,spotify
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,flickr
-
 
 # Top Blocked Sites
 DOMAIN-SUFFIX,4sqi.net
@@ -1772,8 +1768,6 @@ DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
 DOMAIN-KEYWORD,.pinterest.
 DOMAIN-KEYWORD,dlercloud
-DOMAIN-KEYWORD,facebook
-DOMAIN-KEYWORD,fbcdn
 DOMAIN-KEYWORD,ttvnw
 IP-CIDR,1.201.0.0/24,no-resolve
 IP-CIDR,103.2.28.0/22,no-resolve
