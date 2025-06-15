@@ -1,17 +1,18 @@
 # Mylist
-DOMAIN-SUFFIX,csusm.edu
 DOMAIN-SUFFIX,asu.edu
-DOMAIN-SUFFIX,wellsfargo.com
+DOMAIN-SUFFIX,bimmerpost.com
+DOMAIN-SUFFIX,csusm.edu
+DOMAIN-SUFFIX,kbb.com
 DOMAIN-SUFFIX,oracle.com
 DOMAIN-SUFFIX,oraclecloud.com
 DOMAIN-SUFFIX,oracleinfinity.io
-DOMAIN-SUFFIX,kbb.com
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypalobjects.com
-DOMAIN-SUFFIX,venmo.com
-DOMAIN-SUFFIX,bimmerpost.com
-DOMAIN-SUFFIX,riotgames.com
 DOMAIN-SUFFIX,proton.me
+DOMAIN-SUFFIX,riotgames.com
+DOMAIN-SUFFIX,venmo.com
+DOMAIN-SUFFIX,wellsfargo.com
+DOMAIN-SUFFIX,xbimmers.com
 
 # Reddit
 DOMAIN-SUFFIX,redd.it
