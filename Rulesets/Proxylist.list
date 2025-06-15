@@ -177,7 +177,6 @@ IP-CIDR,54.230.156.0/22,no-resolve
 
 # BBC
 # UPDATED: 2025-06-06 09:16:56
-# TOTAL: 28
 DOMAIN,aod-dash-uk-live.akamaized.net
 DOMAIN,aod-hls-uk-live.akamaized.net
 DOMAIN,as-dash-uk-live.akamaized.net
@@ -250,7 +249,6 @@ IP-CIDR,204.15.20.0/22,no-resolve
 
 # GitHub
 # UPDATED: 2025-06-06 09:15:10
-# TOTAL: 30
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
 DOMAIN-SUFFIX,ghcr.io
@@ -282,7 +280,7 @@ DOMAIN-SUFFIX,repo.new
 DOMAIN-SUFFIX,thegithubshop.com
 DOMAIN-KEYWORD,github
 
-# NAME: Google
+# Google
 # UPDATED: 2025-06-06 09:15:10
 DOMAIN,voice.telephony.goog
 DOMAIN-SUFFIX,0emm.com
@@ -961,55 +959,6 @@ PROCESS-NAME,com.google.android.gsf
 PROCESS-NAME,com.google.android.play.games
 PROCESS-NAME,BackupandSync
 
-# GoogleCNProxyIP 谷歌中国服务 services.googleapis.cn
-DOMAIN-SUFFIX,2mdn-cn.net
-DOMAIN-SUFFIX,admob-cn.com
-DOMAIN-SUFFIX,app-measurement-cn.com
-DOMAIN-SUFFIX,dartsearch-cn.net
-DOMAIN-SUFFIX,doubleclick-cn.net
-DOMAIN-SUFFIX,g.cn
-DOMAIN-SUFFIX,gkecnapps.cn
-DOMAIN-SUFFIX,google-analytics-cn.com
-DOMAIN-SUFFIX,google.cn
-DOMAIN-SUFFIX,googleadservices-cn.com
-DOMAIN-SUFFIX,googleapis-cn.com
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,googleapps-cn.com
-DOMAIN-SUFFIX,googlecnapps.cn
-DOMAIN-SUFFIX,googleflights-cn.net
-DOMAIN-SUFFIX,googleoptimize-cn.com
-DOMAIN-SUFFIX,googlesyndication-cn.com
-DOMAIN-SUFFIX,googletagmanager-cn.com
-DOMAIN-SUFFIX,googletagservices-cn.com
-DOMAIN-SUFFIX,googletraveladservices-cn.com
-DOMAIN-SUFFIX,googlevads-cn.com
-DOMAIN-SUFFIX,gstatic-cn.com
-DOMAIN-SUFFIX,gstatic.cn
-DOMAIN-SUFFIX,gstaticcnapps.cn
-DOMAIN-SUFFIX,gvt1-cn.com
-DOMAIN-SUFFIX,gvt2-cn.com
-DOMAIN-SUFFIX,picnik.com
-DOMAIN-SUFFIX,qiao-cn.com
-DOMAIN-SUFFIX,recaptcha-cn.net
-IP-CIDR,120.232.181.162/32,no-resolve
-IP-CIDR,120.241.147.226/32,no-resolve
-IP-CIDR,120.253.253.226/32,no-resolve
-IP-CIDR,120.253.255.162/32,no-resolve
-IP-CIDR,120.253.255.34/32,no-resolve
-IP-CIDR,120.253.255.98/32,no-resolve
-IP-CIDR,180.163.150.162/32,no-resolve
-IP-CIDR,180.163.150.34/32,no-resolve
-IP-CIDR,180.163.151.162/32,no-resolve
-IP-CIDR,180.163.151.34/32,no-resolve
-IP-CIDR,203.208.39.0/24,no-resolve
-IP-CIDR,203.208.40.0/24,no-resolve
-IP-CIDR,203.208.41.0/24,no-resolve
-IP-CIDR,203.208.43.0/24,no-resolve
-IP-CIDR,203.208.50.0/24,no-resolve
-IP-CIDR,220.181.174.162/32,no-resolve
-IP-CIDR,220.181.174.226/32,no-resolve
-IP-CIDR,220.181.174.34/32,no-resolve
-
 # Wikipedia 维基相关域名
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikibooks.org
@@ -1025,14 +974,8 @@ DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
 
 
-# NAME: ProxyLite
+# ProxyLite
 # UPDATED: 2025-06-06 09:17:51
-# DOMAIN: 23
-# DOMAIN-KEYWORD: 20
-# DOMAIN-SUFFIX: 842
-# IP-CIDR: 86
-# IP-CIDR6: 4
-# TOTAL: 975
 DOMAIN,addons.mozilla.org
 DOMAIN,amp-api.podcasts.apple.com
 DOMAIN,api.msn.com
