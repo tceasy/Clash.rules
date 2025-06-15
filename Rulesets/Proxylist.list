@@ -981,8 +981,6 @@ DOMAIN,api.msn.com
 DOMAIN,api.waqi.info
 DOMAIN,aqi.aqicn.org
 DOMAIN,assets.msn.com
-DOMAIN,assets1.xboxlive.com
-DOMAIN,assets2.xboxlive.com
 DOMAIN,az416426.vo.msecnd.net
 DOMAIN,az668014.vo.msecnd.net
 DOMAIN,beta.music.apple.com
@@ -1406,7 +1404,6 @@ DOMAIN-SUFFIX,poloniex.com
 DOMAIN-SUFFIX,popo.tw
 DOMAIN-SUFFIX,prism-break.org
 DOMAIN-SUFFIX,privoxy.org
-DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,proxfree.com
 DOMAIN-SUFFIX,proxifier.com
 DOMAIN-SUFFIX,psiphon3.com
@@ -1424,11 +1421,7 @@ DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,readingtimes.com.tw
 DOMAIN-SUFFIX,readmoo.com
 DOMAIN-SUFFIX,readyatdawn.com
-DOMAIN-SUFFIX,redd.it
-DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditlist.com
-DOMAIN-SUFFIX,redditmedia.com
-DOMAIN-SUFFIX,redditstatic.com
 DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,reutersmedia.net
@@ -1436,7 +1429,6 @@ DOMAIN-SUFFIX,rfi.fr
 DOMAIN-SUFFIX,rileyguide.com
 DOMAIN-SUFFIX,rime.im
 DOMAIN-SUFFIX,riotcdn.net
-DOMAIN-SUFFIX,riotgames.com
 DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,rsf.org
 DOMAIN-SUFFIX,rsshub.app
