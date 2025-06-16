@@ -1001,7 +1001,6 @@ DOMAIN,tv.apple.com
 DOMAIN,wego.here.com
 DOMAIN-SUFFIX,4everproxy.com
 DOMAIN-SUFFIX,4shared.com
-DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,9cache.com
 DOMAIN-SUFFIX,9gag.com
 DOMAIN-SUFFIX,9to5mac.com
@@ -1100,7 +1099,6 @@ DOMAIN-SUFFIX,cdn.segment.com
 DOMAIN-SUFFIX,celestrak.com
 DOMAIN-SUFFIX,census.gov
 DOMAIN-SUFFIX,change.org
-DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,chinadigitaltimes.net
 DOMAIN-SUFFIX,chinatimes.com
 DOMAIN-SUFFIX,cl.ly
@@ -1351,7 +1349,6 @@ DOMAIN-SUFFIX,nih.gov
 DOMAIN-SUFFIX,nimg.jp
 DOMAIN-SUFFIX,nintendo.com
 DOMAIN-SUFFIX,novafile.com
-DOMAIN-SUFFIX,now.com
 DOMAIN-SUFFIX,nrk.no
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,nyt.com
@@ -1387,8 +1384,6 @@ DOMAIN-SUFFIX,pastie.org
 DOMAIN-SUFFIX,pcloud.com
 DOMAIN-SUFFIX,pdfexpert.com
 DOMAIN-SUFFIX,peing.net
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,piaotian.net
 DOMAIN-SUFFIX,picacomic.com
 DOMAIN-SUFFIX,picjs.xyz
@@ -1426,7 +1421,6 @@ DOMAIN-SUFFIX,readingtimes.com.tw
 DOMAIN-SUFFIX,readmoo.com
 DOMAIN-SUFFIX,readyatdawn.com
 DOMAIN-SUFFIX,redditlist.com
-DOMAIN-SUFFIX,redtube.com
 DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,reutersmedia.net
 DOMAIN-SUFFIX,rfi.fr
@@ -1463,7 +1457,6 @@ DOMAIN-SUFFIX,snapchat.com
 DOMAIN-SUFFIX,sockslist.net
 DOMAIN-SUFFIX,sourceforge.net
 DOMAIN-SUFFIX,sowers.org.hk
-DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,speakerdeck.com
 DOMAIN-SUFFIX,speedsmart.net
 DOMAIN-SUFFIX,spideroak.com
@@ -1493,7 +1486,6 @@ DOMAIN-SUFFIX,swissinfo.ch
 DOMAIN-SUFFIX,sydneytoday.com
 DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,t66y.com
 DOMAIN-SUFFIX,tablesgenerator.com
 DOMAIN-SUFFIX,tabtter.jp
 DOMAIN-SUFFIX,talk853.com
@@ -1560,7 +1552,6 @@ DOMAIN-SUFFIX,tweetmarker.net
 DOMAIN-SUFFIX,twimg.co
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twimg.org
-DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitthat.com
 DOMAIN-SUFFIX,twtkr.com
@@ -1664,13 +1655,8 @@ DOMAIN-SUFFIX,xanga.com
 DOMAIN-SUFFIX,xclient.info
 DOMAIN-SUFFIX,xda-developers.com
 DOMAIN-SUFFIX,xeeno.com
-DOMAIN-SUFFIX,xhamster.com
-DOMAIN-SUFFIX,xnxx-cdn.com
-DOMAIN-SUFFIX,xnxx.com
 DOMAIN-SUFFIX,xteko.com
 DOMAIN-SUFFIX,xuite.net
-DOMAIN-SUFFIX,xvideos-cdn.com
-DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,yadi.sk
 DOMAIN-SUFFIX,yahoo.com
 DOMAIN-SUFFIX,yahooapis.com
@@ -1706,7 +1692,6 @@ DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
 DOMAIN-KEYWORD,.pinterest.
 DOMAIN-KEYWORD,dlercloud
-DOMAIN-KEYWORD,ttvnw
 IP-CIDR,1.201.0.0/24,no-resolve
 IP-CIDR,103.2.28.0/22,no-resolve
 IP-CIDR,103.246.56.0/22,no-resolve
