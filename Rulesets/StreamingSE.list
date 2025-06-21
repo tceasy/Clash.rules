@@ -8,9 +8,8 @@ IP-CIDR,188.172.228.49/32
 IP-CIDR,202.61.255.248/32
 
 # TVB
-DOMAIN,bcbolt446c5271-a.akamaihd.net
-DOMAIN,edge.api.brightcove.com
-DOMAIN,tvbtracking.azurewebsites.net
+DOMAIN-SUFFIX,boltdns.net
+DOMAIN-SUFFIX,brightcovecdn.com
 DOMAIN-SUFFIX,content.jwplatform.com
 DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,mytvsuperlimited.hb.omtrdc.net
@@ -23,3 +22,6 @@ DOMAIN-SUFFIX,tvbanywherena.com
 DOMAIN-SUFFIX,tvbc.com.cn
 DOMAIN-SUFFIX,tvbeventpower.com.hk
 DOMAIN-SUFFIX,tvbusa.com
+DOMAIN,bcbolt446c5271-a.akamaihd.net
+DOMAIN,edge.api.brightcove.com
+DOMAIN,tvbtracking.azurewebsites.net
