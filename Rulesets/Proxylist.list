@@ -1,6 +1,7 @@
 # MyList && Other
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,adguard.org
+DOMAIN-SUFFIX,amysecure.com
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,bitwarden.net
 DOMAIN-SUFFIX,certipedia.com
@@ -10,6 +11,7 @@ DOMAIN-SUFFIX,gameloft.com
 DOMAIN-SUFFIX,hoyolab.com
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,sntp.uk
@@ -73,8 +75,6 @@ DOMAIN-SUFFIX,eurekavpt.com
 DOMAIN-SUFFIX,fastmail.com
 DOMAIN-SUFFIX,flickr.com
 DOMAIN-SUFFIX,flipboard.com
-DOMAIN-SUFFIX,gfx.ms
-DOMAIN-SUFFIX,gongm.in
 DOMAIN-SUFFIX,hulu.com
 DOMAIN-SUFFIX,id.heroku.com
 DOMAIN-SUFFIX,io.io
