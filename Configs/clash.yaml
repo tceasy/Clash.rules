@@ -12,10 +12,10 @@ port: 7890
 socks-port: 7891
 
 # Linux 和 macOS 的 redir 透明代理端口 (重定向 TCP 和 TProxy UDP 流量)
-# redir-port: 7892
+redir-port: 7892
 
 # Linux 的透明代理端口（适用于 TProxy TCP 和 TProxy UDP 流量)
-# tproxy-port: 7893
+tproxy-port: 7893
 
 # HTTP(S) and SOCKS5 共用端口
 # mixed-port: 7890
@@ -112,14 +112,10 @@ dns:
   #
   # 采取以上逻辑进行域名解析是为了对抗 DNS 投毒攻击。
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
       - 240.0.0.0/4
       - 0.0.0.0/32
-    #domain:
-    # - '+.google.com'
-    # - '+.facebook.com'
-    # - '+.youtube.com'
 
   enhanced-mode: fake-ip # 或 redir-host
   fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
