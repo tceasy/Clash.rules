@@ -1,6 +1,5 @@
 # Mylist
 DOMAIN-SUFFIX,asu.edu
-DOMAIN-SUFFIX,bimmerpost.com
 DOMAIN-SUFFIX,csusm.edu
 DOMAIN-SUFFIX,kbb.com
 DOMAIN-SUFFIX,oracle.com
@@ -12,7 +11,6 @@ DOMAIN-SUFFIX,proton.me
 DOMAIN-SUFFIX,riotgames.com
 DOMAIN-SUFFIX,venmo.com
 DOMAIN-SUFFIX,wellsfargo.com
-DOMAIN-SUFFIX,xbimmers.com
 
 # Reddit
 DOMAIN-SUFFIX,redd.it
