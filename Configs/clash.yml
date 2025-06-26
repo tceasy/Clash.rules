@@ -43,7 +43,7 @@ mode: rule
 log-level: silent
 
 # clash 的 RESTful API 监听地址
-external-controller: 127.0.0.1:9090
+#external-controller: 127.0.0.1:9090
 
 # 存放配置文件的相对路径，或存放网页静态资源的绝对路径
 # Clash core 将会将其部署在 http://{{external-controller}}/ui
@@ -74,7 +74,7 @@ dns:
 
   # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
   # 仅填写 DNS 服务器的 IP 地址
-  default-nameserver:
+  nameserver:
     - 223.5.5.5 # 阿里DNS
     - 180.76.76.76 # 百度DNS
     - 119.29.29.29 # 腾讯DNS
