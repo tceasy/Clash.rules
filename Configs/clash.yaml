@@ -6,19 +6,19 @@
 #---------------------------------------------------#
 
 # HTTP 代理端口
-port: 7890
+#port: 7890
 
 # SOCKS5 代理端口
-socks-port: 7891
+#socks-port: 7891
 
 # Linux 和 macOS 的 redir 透明代理端口 (重定向 TCP 和 TProxy UDP 流量)
-redir-port: 7892
+#redir-port: 7892
 
 # Linux 的透明代理端口（适用于 TProxy TCP 和 TProxy UDP 流量)
-tproxy-port: 7893
+#tproxy-port: 7893
 
 # HTTP(S) and SOCKS5 共用端口
-# mixed-port: 7890
+mixed-port: 7890
 
 # 本地 SOCKS5/HTTP(S) 服务验证
 # authentication:
@@ -40,7 +40,7 @@ mode: rule
 # Clash 默认将日志输出至 STDOUT
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
-log-level: info
+log-level: silent
 
 # clash 的 RESTful API 监听地址
 #external-controller: 127.0.0.1:9090
@@ -67,7 +67,7 @@ log-level: info
 # 'alpha.clash.dev': '::1'
 
 # DNS 服务器配置(可选；若不配置，程序内置的 DNS 服务会被关闭)
-#dns:
+dns:
   enable: true
   listen: 0.0.0.0:53
   ipv6: true # 当此选项为 false 时, AAAA 请求将返回空
