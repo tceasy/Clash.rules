@@ -6,19 +6,19 @@
 #---------------------------------------------------#
 
 # HTTP 代理端口
-#port: 7890
+port: 7890
 
 # SOCKS5 代理端口
-#socks-port: 7891
+socks-port: 7891
 
 # Linux 和 macOS 的 redir 透明代理端口 (重定向 TCP 和 TProxy UDP 流量)
-#redir-port: 7892
+redir-port: 7892
 
 # Linux 的透明代理端口（适用于 TProxy TCP 和 TProxy UDP 流量)
-#tproxy-port: 7893
+tproxy-port: 7893
 
 # HTTP(S) and SOCKS5 共用端口
-mixed-port: 7890
+# mixed-port: 7890
 
 # 本地 SOCKS5/HTTP(S) 服务验证
 # authentication:
@@ -26,7 +26,7 @@ mixed-port: 7890
 #  - "user2:pass2"
 
 # 允许局域网的连接（可用来共享代理）
-allow-lan: true
+allow-lan: false
 bind-address: "*"
 # 此功能仅在 allow-lan 设置为 true 时生效，支持三种参数：
 # "*"                           绑定所有的 IP 地址
@@ -75,31 +75,31 @@ dns:
   # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
   # 仅填写 DNS 服务器的 IP 地址
   nameserver:
-    - 223.5.5.5 # 阿里DNS
-    - 180.76.76.76 # 百度DNS
-    - 119.29.29.29 # 腾讯DNS
-    - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
-    - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
-    - 114.114.114.114 # 114DNS
+      - 223.5.5.5 # 阿里DNS
+      - 180.76.76.76 # 百度DNS
+      - 119.29.29.29 # 腾讯DNS
+      - 117.50.11.11 # ONE DNS拦截版 恶意网站拦截、广告过滤
+      - 117.50.10.10 # ONE DNS纯净版 直接返回其真实的响应结果
+      - 114.114.114.114 # 114DNS
 
   # 支持 UDP / TCP / DoT / DoH 协议的 DNS 服务，可以指明具体的连接端口号。
   # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
   # Clash 会使用最先获得的解析记录回复 DNS 请求
-    - https://dns.alidns.com/dns-query # 阿里 DoH DNS
-    - https://doh.360.cn/dns-query # 360 DoH DNS
+      - https://dns.alidns.com/dns-query # 阿里 DoH DNS
+      - https://doh.360.cn/dns-query # 360 DoH DNS
 
 
   # 当 fallback 参数被配置时, DNS 请求将同时发送至上方 nameserver 列表和下方 fallback 列表中配置的所有 DNS 服务器.
   # 当解析得到的 IP 地址的地理位置不是 CN 时，clash 将会选用 fallback 中 DNS 服务器的解析结果。
   fallback:
-    - 8.8.8.8 # 谷歌DNS
-    - 1.1.1.1 # Cloudflare DNS
-    - tls://dns.rubyfish.cn:853
-    - tls://1.0.0.1:853
-    - tls://dns.google:853
-    - https://dns.rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
+      - 8.8.8.8 # 谷歌DNS
+      - 1.1.1.1 # Cloudflare DNS
+      - tls://dns.rubyfish.cn:853
+      - tls://1.0.0.1:853
+      - tls://dns.google:853
+      - https://dns.rubyfish.cn/dns-query
+      - https://cloudflare-dns.com/dns-query
+      - https://dns.google/dns-query
 
   # 如果使用 nameserver 列表中的服务器解析的 IP 地址在下方列表中的子网中，则它们被认为是无效的，
   # Clash 会选用 fallback 列表中配置 DNS 服务器解析得到的结果。
@@ -114,8 +114,8 @@ dns:
   fallback-filter:
     geoip: true
     ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
+        - 240.0.0.0/4
+        - 0.0.0.0/32
 
   enhanced-mode: fake-ip # 或 redir-host
   fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
@@ -124,87 +124,87 @@ dns:
   fake-ip-filter:
     # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl0us 整理补充
     # === LAN ===
-    - '*.lan'
-    - localhost.ptlogin2.qq.com
+      - '*.lan'
+      - localhost.ptlogin2.qq.com
     # === Linksys Wireless Router ===
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
+      - '*.linksys.com'
+      - '*.linksyssmartwifi.com'
     # === Apple Software Update Service ===
-    - 'swscan.apple.com'
-    - 'mesu.apple.com'
+      - 'swscan.apple.com'
+      - 'mesu.apple.com'
     # === Windows 10 Connnect Detection ===
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
+      - '*.msftconnecttest.com'
+      - '*.msftncsi.com'
     # === NTP Service ===
-    - 'time.*.com'
-    - 'time.*.gov'
-    - 'time.*.edu.cn'
-    - 'time.*.apple.com'
+      - 'time.*.com'
+      - 'time.*.gov'
+      - 'time.*.edu.cn'
+      - 'time.*.apple.com'
 
-    - 'time1.*.com'
-    - 'time2.*.com'
-    - 'time3.*.com'
-    - 'time4.*.com'
-    - 'time5.*.com'
-    - 'time6.*.com'
-    - 'time7.*.com'
+      - 'time1.*.com'
+      - 'time2.*.com'
+      - 'time3.*.com'
+      - 'time4.*.com'
+      - 'time5.*.com'
+      - 'time6.*.com'
+      - 'time7.*.com'
 
-    - 'ntp.*.com'
-    - 'ntp.*.com'
-    - 'ntp1.*.com'
-    - 'ntp2.*.com'
-    - 'ntp3.*.com'
-    - 'ntp4.*.com'
-    - 'ntp5.*.com'
-    - 'ntp6.*.com'
-    - 'ntp7.*.com'
+      - 'ntp.*.com'
+      - 'ntp.*.com'
+      - 'ntp1.*.com'
+      - 'ntp2.*.com'
+      - 'ntp3.*.com'
+      - 'ntp4.*.com'
+      - 'ntp5.*.com'
+      - 'ntp6.*.com'
+      - 'ntp7.*.com'
 
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - '+.pool.ntp.org'
+      - '*.time.edu.cn'
+      - '*.ntp.org.cn'
+      - '+.pool.ntp.org'
 
-    - 'time1.cloud.tencent.com'
+      - 'time1.cloud.tencent.com'
     # === Music Service ===
     ## NetEase
-    - '+.music.163.com'
-    - '*.126.net'
+      - '+.music.163.com'
+      - '*.126.net'
     ## Baidu
-    - 'musicapi.taihe.com'
-    - 'music.taihe.com'
+      - 'musicapi.taihe.com'
+      - 'music.taihe.com'
     ## Kugou
-    - 'songsearch.kugou.com'
-    - 'trackercdn.kugou.com'
+      - 'songsearch.kugou.com'
+      - 'trackercdn.kugou.com'
     ## Kuwo
-    - '*.kuwo.cn'
+      - '*.kuwo.cn'
     ## JOOX
-    - 'api-jooxtt.sanook.com'
-    - 'api.joox.com'
-    - 'joox.com'
+      - 'api-jooxtt.sanook.com'
+      - 'api.joox.com'
+      - 'joox.com'
     ## QQ
-    - '+.y.qq.com'
-    - '+.music.tc.qq.com'
-    - 'aqqmusic.tc.qq.com'
-    - '+.stream.qqmusic.qq.com'
+      - '+.y.qq.com'
+      - '+.music.tc.qq.com'
+      - 'aqqmusic.tc.qq.com'
+      - '+.stream.qqmusic.qq.com'
     ## Xiami
-    - '*.xiami.com'
+      - '*.xiami.com'
     ## Migu
-    - '+.music.migu.cn'
+      - '+.music.migu.cn'
     # === Game Service ===
     ## Nintendo Switch
-    - '+.srv.nintendo.net'
+      - '+.srv.nintendo.net'
     ## Sony PlayStation
-    - '+.stun.playstation.net'
+      - '+.stun.playstation.net'
     ## Microsoft Xbox
-    - 'xbox.*.microsoft.com'
-    - '+.xboxlive.com'
+      - 'xbox.*.microsoft.com'
+      - '+.xboxlive.com'
     # === Other ===
     ## QQ Quick Login
-    - 'localhost.ptlogin2.qq.com'
+      - 'localhost.ptlogin2.qq.com'
     ## Golang
-    - 'proxy.golang.org'
+      - 'proxy.golang.org'
     ## STUN Server
-    - 'stun.*.*'
-    - 'stun.*.*.*'
+      - 'stun.*.*'
+      - 'stun.*.*.*'
 
     ## Bilibili CDN
-    - '*.mcdn.bilivideo.cn'
+      - '*.mcdn.bilivideo.cn'
