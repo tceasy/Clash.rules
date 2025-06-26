@@ -2,23 +2,15 @@
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,adguard.org
 DOMAIN-SUFFIX,amysecure.com
+DOMAIN-SUFFIX,bimmerpost.com
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,bitwarden.net
-DOMAIN-SUFFIX,certipedia.com
-DOMAIN-SUFFIX,cloudcone.com
 DOMAIN-SUFFIX,engadget.com
-DOMAIN-SUFFIX,gameloft.com
-DOMAIN-SUFFIX,hoyolab.com
 DOMAIN-SUFFIX,ip138.com
-DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,nexitally.com
-DOMAIN-SUFFIX,notion.so
-DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,sntp.uk
-DOMAIN-SUFFIX,teddysun.com
-DOMAIN-SUFFIX,tumbex.com
-DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,unsplash.com
+DOMAIN-SUFFIX,xbimmers.com
 
 # 国外域名关键字
 DOMAIN-KEYWORD,abema
