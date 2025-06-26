@@ -16,12 +16,11 @@ mixed-port: 7890
 
 # 允许局域网的连接（可用来共享代理）
 allow-lan: true
-
+bind-address: "*"
 # 仅在将allow-lan设置为true时适用
 # #"*": 绑定所有IP地址
 # #192.168.122.11: 绑定单个IPv4地址
 # #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
-bind-address: "*"
 
 # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
 # mode: rule
@@ -45,8 +44,8 @@ external-controller: '127.0.0.1:9090'
 # secret: ""
 
 # 实验性功能
-experimental:
-  ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
+#experimental:
+  #ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
   # interface-name: en0 # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
@@ -63,7 +62,7 @@ experimental:
 
 dns:
   enable: true # 是否启用dns false
-  ipv6: true
+  ipv6: false
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 #
@@ -197,8 +196,8 @@ dns:
 
 # Clash for Windows
 # Proxies module latency test settings
-cfw-latency-timeout: 3000
-cfw-latency-url: http://www.gstatic.com/generate_204
+#cfw-latency-timeout: 3000
+#cfw-latency-url: http://www.gstatic.com/generate_204
 
 # 混合配置（mixin）
 # 支持向所有配置文件中注入公共属性设置
@@ -244,4 +243,4 @@ cfw-conn-break-strategy:
 #  latency：按节点延迟升序排列
 #  alphabet：按节点名称字母表排列
 # Sort proxies in Proxies module by default/latency/alphabet
-cfw-proxies-order: default
+#cfw-proxies-order: default
