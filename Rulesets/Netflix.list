@@ -1266,7 +1266,6 @@ IP-CIDR,46.51.224.0/19,no-resolve
 IP-CIDR,46.137.0.0/16,no-resolve
 IP-CIDR,50.16.0.0/14,no-resolve
 IP-CIDR,50.112.0.0/16,no-resolve
-IP-CIDR,52.0.0.0/11,no-resolve
 IP-CIDR,52.0.0.0/15,no-resolve
 IP-CIDR,52.5.0.0/16,no-resolve
 IP-CIDR,52.7.0.0/16,no-resolve
