@@ -1146,7 +1146,6 @@ IP-CIDR,43.249.45.0/24,no-resolve
 IP-CIDR,43.249.46.0/23,no-resolve
 IP-CIDR,43.250.192.0/23,no-resolve
 IP-CIDR,43.250.194.0/24,no-resolve
-IP-CIDR,44.192.0.0/10,no-resolve
 IP-CIDR,44.192.134.240/28,no-resolve
 IP-CIDR,44.192.135.0/24,no-resolve
 IP-CIDR,44.192.140.64/28,no-resolve
