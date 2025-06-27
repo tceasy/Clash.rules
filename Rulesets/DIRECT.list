@@ -2019,27 +2019,6 @@ DOMAIN-SUFFIX,yizhitou.com
 DOMAIN-SUFFIX,yunpei.com
 DOMAIN-SUFFIX,yunxiu.com
 
-# NetEase
-DOMAIN-SUFFIX,126.com
-DOMAIN-SUFFIX,126.net
-DOMAIN-SUFFIX,127.net
-DOMAIN-SUFFIX,163.com
-DOMAIN-SUFFIX,163yun.com
-DOMAIN-SUFFIX,lofter.com
-DOMAIN-SUFFIX,netease.com
-DOMAIN-SUFFIX,ydstatic.com
-DOMAIN-SUFFIX,youdao.com
-
-# Sina
-DOMAIN-SUFFIX,leju.com
-DOMAIN-SUFFIX,miaopai.com
-DOMAIN-SUFFIX,sina.com
-DOMAIN-SUFFIX,sinaapp.com
-DOMAIN-SUFFIX,sinaimg.com
-DOMAIN-SUFFIX,weibo.com
-DOMAIN-SUFFIX,weibocdn.com
-DOMAIN-SUFFIX,xiaoka.tv
-
 # Tencent
 # UPDATED: 2025-06-06 09:17:29
 DOMAIN-SUFFIX,1700.cn
