@@ -50,7 +50,6 @@ IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve
 
 # Microsoft
-DOMAIN-KEYWORD,microsoft
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
 DOMAIN-SUFFIX,acompli.net
