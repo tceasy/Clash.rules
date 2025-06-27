@@ -27,9 +27,10 @@ DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-SUFFIX,in.appcenter.ms
 DOMAIN-SUFFIX,skyapi.live.net
-DOMAIN-SUFFIX,my.microsoftpersonalcontent.com
-DOMAIN-SUFFIX,mobile.events.data.microsoft.com
-DOMAIN-SUFFIX,self.events.data.microsoft.com
+DOMAIN,my.microsoftpersonalcontent.com
+DOMAIN,mobile.events.data.microsoft.com
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,skydrive.wns.windows.com
 DOMAIN-KEYWORD,1drv
 DOMAIN-KEYWORD,onedrive
 DOMAIN-KEYWORD,skydrive
