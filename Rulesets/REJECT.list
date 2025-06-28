@@ -1,5 +1,5 @@
 # Prevent Telegram from loading content
-IP-CIDR,95.161.76.100/31
+IP-CIDR,95.161.76.100/31,no-resolve
 
 # Reject list from V2TUN
 DOMAIN-KEYWORD,adservice
