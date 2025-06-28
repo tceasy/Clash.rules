@@ -1,0 +1,69 @@
+# Apple
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,cn-ssl.ls.apple.com
+DOMAIN-SUFFIX,cn.apple.com
+DOMAIN-SUFFIX,cn.ls.apple.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,gspe19-cn-ssl.ls.apple.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,organicfruitapps.com
+DOMAIN,api.smoot.apple.cn
+DOMAIN,apple.comscoreresearch.com
+DOMAIN,gs-loc-cn.apple.com
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,144.178.36.0/22,no-resolve
+IP-CIDR,144.178.48.0/20,no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,192.35.50.0/24,no-resolve
+IP-CIDR,198.183.17.0/24,no-resolve
+IP-CIDR,205.180.175.0/24,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
+PROCESS-NAME,netbiosd
+PROCESS-NAME,trustd
+
+# Apple System Services
+# DOMAIN api.smoot.apple.com
+# DOMAIN captive.apple.com
+# DOMAIN xp.apple.com
+# DOMAIN configuration.apple.com
+# DOMAIN guzzoni.apple.com
+# DOMAIN smp-device-content.apple.com
+# DOMAIN-SUFFIX ess.apple.com
+DOMAIN-SUFFIX,push-apple.com.akadns.net
+# DOMAIN-SUFFIX push.apple.com
+# DOMAIN aod.itunes.apple.com
+# DOMAIN mesu.apple.com
+# DOMAIN gs-loc.apple.com
+# DOMAIN mvod.itunes.apple.com
+# DOMAIN streamingaudio.itunes.apple.com
+# DOMAIN-SUFFIX lcdn-locator.apple.com
+# DOMAIN-SUFFIX lcdn-registration.apple.com
+# DOMAIN-SUFFIX ls.apple.com
+PROCESS-NAME,apsd
+PROCESS-NAME,fmfd
+PROCESS-NAME,findmydevice-user-agent
+PROCESS-NAME,CoreLocationAgent
+PROCESS-NAME,WeatherWidget
+
+# Apple Maps
+PROCESS-NAME,com.apple.geod
+PROCESS-NAME,mapspushd
+PROCESS-NAME,com.apple.Maps
