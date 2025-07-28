@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "themoviedb.org",
+        "boxofficemojo.com",
+        "imdb.to",
+        "media-imdb.com",
+        "imdb.com",
+        "tmdb.org",
+        "plex.tv",
+        "thetvdb.com",
+        "fanart.tv",
+        "tvmaze.com",
+        "last.fm",
+        "audiodb.com",
+        "theaudiodb.com",
+        "musicbrainz.org",
+        "viaf.org",
+        "openlibrary.org",
+        "jellyfin.org",
+        "unraid.net",
+        "ghcr.io",
+        "quay.io",
+        "letsencrypt.org",
+        "lencr.org"
+      ]
+    }
+  ]
+}
