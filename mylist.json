@@ -24,7 +24,9 @@
         "ghcr.io",
         "quay.io",
         "letsencrypt.org",
-        "lencr.org"
+        "lencr.org",
+        "trakt.tv",
+        "syncthing.net"
       ]
     }
   ]
