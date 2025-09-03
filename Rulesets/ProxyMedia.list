@@ -6,11 +6,13 @@ DOMAIN-SUFFIX,pornhubpremium.com
 
 # Porn
 DOMAIN-KEYWORD,porn
+DOMAIN-REGEX,^v\.rn\d+\.xyz$
 DOMAIN-SUFFIX,8teenxxx.com
 DOMAIN-SUFFIX,chaturbate.com
 DOMAIN-SUFFIX,javbus.com
 DOMAIN-SUFFIX,rdtcdn.com
 DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,rou.video
 DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,t66y.com
 DOMAIN-SUFFIX,xhamster.com
@@ -28,4 +30,5 @@ DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,twitch-ext.rootonline.de
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
+
 
