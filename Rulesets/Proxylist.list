@@ -13,6 +13,8 @@ DOMAIN-SUFFIX,unsplash.com
 DOMAIN-SUFFIX,xbimmers.com
 
 # Facebook
+DOMAIN-KEYWORD,facebook
+DOMAIN-KEYWORD,fbcdn
 DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,facebook.net
 DOMAIN-SUFFIX,fb.com
@@ -132,3 +134,4 @@ DOMAIN-SUFFIX,sourcegraph.com
 DOMAIN-SUFFIX,spring.io
 DOMAIN-SUFFIX,spring.net
 DOMAIN-SUFFIX,stackoverflow.com
+
