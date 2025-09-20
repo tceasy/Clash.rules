@@ -7,6 +7,8 @@ DOMAIN,ad.51wnl-cq.com
 DOMAIN,adextra.51wnl-cq.com
 DOMAIN,log.51wnl-cq.com
 DOMAIN,r.51wnl-cq.com
+DOMAIN,121.43.145.95
+DOMAIN-SUFFIX,okaapps.com
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,ads.internal.unity3d.com
 DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
@@ -635,3 +637,4 @@ DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
+
