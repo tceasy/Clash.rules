@@ -8,6 +8,7 @@ DOMAIN,adextra.51wnl-cq.com
 DOMAIN,log.51wnl-cq.com
 DOMAIN,r.51wnl-cq.com
 DOMAIN,121.43.145.95
+DOMAIN,api-cn.store.heytapmobi.com
 IP-CIDR,223.5.5.5/32,no-resolve
 IP-CIDR,121.43.145.95/32,no-resolve
 DOMAIN-SUFFIX,okaapps.com
@@ -639,6 +640,7 @@ DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
+
 
 
 
