@@ -7,30 +7,7 @@ DOMAIN,preus.cn2gias.uk
 IP-CIDR,188.172.228.49/32
 IP-CIDR,202.61.255.248/32
 
-# TVB
-DOMAIN-SUFFIX,content.jwplatform.com
-DOMAIN-SUFFIX,mytvsuper.com
-DOMAIN-SUFFIX,mytvsuperlimited.hb.omtrdc.net
-DOMAIN-SUFFIX,mytvsuperlimited.sc.omtrdc.net
-DOMAIN-SUFFIX,tvb.com
-DOMAIN-SUFFIX,tvb.com.au
-DOMAIN-SUFFIX,tvbanywhere.com
-DOMAIN-SUFFIX,tvbanywhere.com.sg
-DOMAIN-SUFFIX,tvbc.com.cn
-DOMAIN-SUFFIX,tvbeventpower.com.hk
-DOMAIN-SUFFIX,tvbusa.com
-DOMAIN,bcbolt446c5271-a.akamaihd.net
-DOMAIN,tvbtracking.azurewebsites.net
-
-# TVBAanwhereNA
-DOMAIN-SUFFIX,amagi.tv
-DOMAIN-SUFFIX,boltdns.net
-DOMAIN-SUFFIX,brightcove.com
-DOMAIN-SUFFIX,brightcove.net
-DOMAIN-SUFFIX,brightcovecdn.com
-DOMAIN-SUFFIX,cdn77.org
-DOMAIN-SUFFIX,s3-us-west-1.amazonaws.com
-DOMAIN-SUFFIX,tvbanywherena.com
-DOMAIN-SUFFIX,tvbaw.com
-DOMAIN-SUFFIX,zencdn.net
-DOMAIN,edge.api.brightcove.com
+# Mylist
+IP-CIDR,8.8.8.8/32
+IP-CIDR,1.0.0.1/32
+IP-CIDR,1.1.1.1/32
