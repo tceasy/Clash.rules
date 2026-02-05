@@ -15,6 +15,14 @@ DOMAIN-SUFFIX,qupu123.com
 PROCESS-NAME,mailbird.exe
 PROCESS-NAME,parsec
 
+# Subconverter
+DOMAIN-SUFFIX,d1.mk
+DOMAIN-SUFFIX,dlj.tf
+DOMAIN-SUFFIX,sub.cm
+DOMAIN-SUFFIX,sublink.dev
+DOMAIN-SUFFIX,suo.yt
+DOMAIN-SUFFIX,v1.mk
+
 # EMAIL	
 DST-PORT,25
 DST-PORT,2525
@@ -23,24 +31,28 @@ DST-PORT,465
 DST-PORT,587
 
 # Private Tracker
+DOMAIN-KEYWORD,announce
+DOMAIN-KEYWORD,torrent
+DOMAIN-KEYWORD,tracker
+DOMAIN-SUFFIX,52pt.site
 DOMAIN-SUFFIX,btschool.club
-DOMAIN-SUFFIX,hdtime.org
-DOMAIN-SUFFIX,keepfrds.com
-DOMAIN-SUFFIX,rousi.zip
-DOMAIN-SUFFIX,soulvoice.club
-DOMAIN-SUFFIX,totheglory.im
-DOMAIN-SUFFIX,ubits.club
 DOMAIN-SUFFIX,chdbits.co
+DOMAIN-SUFFIX,dicmusic.com
 DOMAIN-SUFFIX,hdchina.org
 DOMAIN-SUFFIX,hdhome.org
 DOMAIN-SUFFIX,hdsky.me
+DOMAIN-SUFFIX,hdtime.org
+DOMAIN-SUFFIX,keepfrds.com
 DOMAIN-SUFFIX,kufei.org
 DOMAIN-SUFFIX,m-team.cc
 DOMAIN-SUFFIX,ourbits.club
 DOMAIN-SUFFIX,pthome.net
-DOMAIN-KEYWORD,announce
-DOMAIN-KEYWORD,torrent
-DOMAIN-KEYWORD,tracker
+DOMAIN-SUFFIX,pttime.org
+DOMAIN-SUFFIX,rousi.pro
+DOMAIN-SUFFIX,rousi.zip
+DOMAIN-SUFFIX,soulvoice.club
+DOMAIN-SUFFIX,totheglory.im
+DOMAIN-SUFFIX,ubits.club
 
 # MicrosoftCN CDNs
 DOMAIN,statics.teams.cdn.office.net
@@ -289,7 +301,3 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
-
-
-
-
