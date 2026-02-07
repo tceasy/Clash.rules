@@ -58,7 +58,7 @@ log-level: silent # 日志等级 silent/error/warning/info/debug
 
 dns:
   cache-algorithm: arc
-  enable: true # 是否启用dns false
+  enable: false # 是否启用dns false
   listen: 0.0.0.0:53
   ipv6: false # false 将返回 AAAA 的空结果
   default-nameserver:
