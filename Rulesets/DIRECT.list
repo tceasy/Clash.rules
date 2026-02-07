@@ -15,14 +15,6 @@ DOMAIN-SUFFIX,qupu123.com
 PROCESS-NAME,mailbird.exe
 PROCESS-NAME,parsec
 
-# Subconverter
-DOMAIN-SUFFIX,d1.mk
-DOMAIN-SUFFIX,dlj.tf
-DOMAIN-SUFFIX,sub.cm
-DOMAIN-SUFFIX,sublink.dev
-DOMAIN-SUFFIX,suo.yt
-DOMAIN-SUFFIX,v1.mk
-
 # EMAIL	
 DST-PORT,25
 DST-PORT,2525
@@ -301,3 +293,4 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
+
