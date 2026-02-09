@@ -3,6 +3,7 @@
 # MyList
 DOMAIN-KEYWORD,gying
 DOMAIN-SUFFIX,chiphell.com
+DOMAIN-SUFFIX,claspws.tv
 DOMAIN-SUFFIX,delldisplaymanagerwindows.com
 DOMAIN-SUFFIX,infinitynewtab.com
 DOMAIN-SUFFIX,laomo.me
@@ -11,6 +12,7 @@ DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,parsec.app
 DOMAIN-SUFFIX,parsecusercontent
 DOMAIN-SUFFIX,pianyuan.org
+DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,qupu123.com
 PROCESS-NAME,mailbird.exe
 PROCESS-NAME,parsec
@@ -294,5 +296,6 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
+
 
 
