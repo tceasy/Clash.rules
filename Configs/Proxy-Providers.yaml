@@ -9,7 +9,7 @@ proxy-providers:
   YToo:
     type: http
     url: "https://4983c690743e.ai-163cdn.com/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=false&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8192%26token%3DChPNQ9ngooXT%26sip002%3D1"
-    interval: 3600
+    interval: 86400
     path: ./provider.yaml
     proxy: DIRECT
     health-check:
@@ -40,7 +40,7 @@ proxy-providers:
   SNTP:
     type: http
     url: "https://sub1.sntp.me/baseStr?token=d7b0815fd5384c102b389b49d5c88909&sign=af128ad4479ac8a66cc2db9b33ae3eed&ts=1770744689&nonce=bb2dd0c11453cc1a721a157078869b4c&v=v2&timestamp=127420"
-    interval: 3600
+    interval: 86400
     proxy: DIRECT
     health-check:
       enable: true
@@ -306,6 +306,7 @@ rule-providers:
     path: ./ruleset/ProxyLite.list
     format: text
     proxy: Proxy
+  # 其他 Rule Provider 依此类推... (篇幅原因省略部分)
 
 rules:
   - RULE-SET,REJECT,REJECT
