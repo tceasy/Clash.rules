@@ -1,0 +1,328 @@
+# 基础配置
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: silent
+
+# 1. 代理集合 (取代原本的订阅链接)
+proxy-providers:
+  YToo:
+    type: http
+    url: "https://4983c690743e.ai-163cdn.com/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=false&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8192%26token%3DChPNQ9ngooXT%26sip002%3D1"
+    interval: 3600
+    path: ./provider.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    # 节点重命名和过滤在这里实现
+    override: # 覆写节点加载时的一些配置项
+      # skip-cert-verify: true
+      # udp: true
+      # down: "50 Mbps"
+      # up: "10 Mbps"
+      # dialer-proxy: proxy
+      # interface-name: tailscale0
+      # routing-mark: 233
+      # ip-version: ipv4-prefer
+      # additional-prefix: "[provider1]"
+      # additional-suffix: "test"
+      # # 名字替换，支持正则表达式
+      proxy-name:
+        - pattern: "专线 "
+          target: ""
+      #   - pattern: "IPLC-(.*?)倍"
+      #     target: "iplc x $1"
+  SNTP:
+    type: http
+    url: "https://sub1.sntp.me/baseStr?token=d7b0815fd5384c102b389b49d5c88909&sign=af128ad4479ac8a66cc2db9b33ae3eed&ts=1770744689&nonce=bb2dd0c11453cc1a721a157078869b4c&v=v2&timestamp=127420"
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+    # 节点重命名和过滤在这里实现
+    override: # 覆写节点加载时的一些配置项
+      skip-cert-verify: true
+      udp: true
+      # down: "50 Mbps"
+      # up: "10 Mbps"
+      # dialer-proxy: proxy
+      # interface-name: tailscale0
+      # routing-mark: 233
+      # ip-version: ipv4-prefer
+      # additional-prefix: "[provider1]"
+      # additional-suffix: "test"
+      # # 名字替换，支持正则表达式
+
+# 2. 策略组 (保持你原有的逻辑)
+proxy-groups:
+  - name: Proxy
+    type: select
+    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 🌏SNTP Asia, 🌎SNTP US]
+
+  - name: Netflix
+    type: select
+    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
+
+  - name: Google
+    type: select
+    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 🌏SNTP Asia]
+
+  - name: Youtube
+    type: select
+    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
+
+  - name: Telegram
+    type: select
+    proxies: [🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
+
+  - name: StreamingSE
+    type: select
+    proxies: [DIRECT, 🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia, 🌎SNTP US]
+
+  - name: MyList
+    type: select
+    proxies: [🇺🇸US, 🌎SNTP US]
+
+  # --- 自动筛选子组 ---
+  - name: 🇭🇰HK
+    type: select
+    use:
+      - YToo
+    filter: "(?=.*(标准 香|高级 香|日用 香))^((?!(日用|台|韩|新|美|阿|德|游戏|澳)).)*$"
+
+  - name: 🇸🇬SG
+    type: select
+    use:
+      - YToo
+    filter: "(?=.*(新|狮|獅|SG-|(?i)Singapore))^((?!(日用|港|台|韩|美)).)*$"
+
+  - name: 🇺🇸US
+    type: fallback
+    use:
+      - YToo
+    filter: "(?=.*(高级 美|American))^((?!(港|台|日|韩|新)).)*$"
+    url: "http://cp.cloudflare.com/generate_204"
+    interval: 300
+    tolerance: 150
+
+  - name: 📺MediaSE
+    type: select
+    use:
+      - YToo
+      - SNTP
+    filter: "(?=.*(0.2x|0.20x|日用))^((?!(韩|阿|德|DE|游戏|澳|特殊|购物|Ukraine|Malaysia|Nigeria|Pakistan|KR|TR)).)*$"
+
+  - name: 🌏SNTP Asia
+    type: select
+    use:
+      - SNTP
+    filter: "(?=.*(2.00x))^((?!(日用|标准|高级|特殊|购物)).)*$"
+
+  - name: 🌎SNTP US
+    type: select
+    use:
+      - SNTP
+    filter: "(?=.*(US))^((?!(HK|SG|日用|标准|高级|特殊|购物)).)*$"
+
+# 3. 规则集 (保持你原有的规则路径)
+rule-providers:
+  REJECT:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/REJECT.list"
+    path: ./ruleset/REJECT.list
+    format: text
+    proxy: Proxy
+  AppleCN:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/AppleCN.list"
+    path: ./ruleset/AppleCN.list
+    format: text
+    proxy: Proxy
+  JD:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/JingDong/JingDong.list"
+    path: ./ruleset/JingDong.list
+    format: text
+    proxy: Proxy
+  Tencent:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Tencent/Tencent.list"
+    path: ./ruleset/Tencent.list
+    format: text
+    proxy: Proxy
+  Alibaba:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Alibaba/Alibaba.list"
+    path: ./ruleset/Alibaba.list
+    format: text
+    proxy: Proxy
+  Download:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Download/Download.list"
+    path: ./ruleset/Download.list
+    format: text
+    proxy: Proxy
+  Direct:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/DIRECT.list"
+    path: ./ruleset/DIRECT.list
+    format: text
+    proxy: Proxy
+
+  Youtube:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Youtube.list"
+    path: ./ruleset/Youtube.list
+    format: text
+    proxy: Proxy
+  Google:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Google.list"
+    path: ./ruleset/Google.list
+    format: text
+    proxy: Proxy
+  Gemini:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Gemini.list"
+    path: ./ruleset/Gemini.list
+    format: text
+    proxy: Proxy
+  Telegram:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Telegram.list"
+    path: ./ruleset/Telegram.list
+    format: text
+    proxy: Proxy
+
+  Reddit:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Reddit/Reddit.list"
+    path: ./ruleset/Reddit.list
+    format: text
+    proxy: Proxy
+  USAProxies:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/USAProxies.list"
+    path: ./ruleset/USAProxies.list
+    format: text
+    proxy: Proxy
+  GitHub:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list"
+    path: ./ruleset/GitHub.list
+    format: text
+    proxy: Proxy
+  OneDrive:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/OneDrive.list"
+    path: ./ruleset/OneDrive.list
+    format: text
+    proxy: Proxy
+  Microsoft:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Microsoft.list"
+    path: ./ruleset/Microsoft.list
+    format: text
+    proxy: Proxy
+  StreamingSE:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/StreamingSE.list"
+    path: ./ruleset/StreamingSE.list
+    format: text
+    proxy: Proxy
+  Netflix:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Netflix.list"
+    path: ./ruleset/Netflix.list
+    format: text
+    proxy: Proxy
+  ProxyMedia:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/ProxyMedia.list"
+    path: ./ruleset/ProxyMedia.list
+    format: text
+    proxy: Proxy
+  ProxyList:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Proxylist.list"
+    path: ./ruleset/Proxylist.list
+    format: text
+    proxy: Proxy
+  ProxyLite:
+    behavior: classical
+    interval: 600
+    type: http
+    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/ProxyLite/ProxyLite.list"
+    path: ./ruleset/ProxyLite.list
+    format: text
+    proxy: Proxy
+  # 其他 Rule Provider 依此类推... (篇幅原因省略部分)
+
+rules:
+  - RULE-SET,REJECT,REJECT
+  - GEOIP,LAN,DIRECT
+  - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,JD,DIRECT
+  - RULE-SET,Tencent,DIRECT
+  - RULE-SET,Alibaba,DIRECT
+  - RULE-SET,Download,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Youtube,Youtube
+  - RULE-SET,Google,Google
+  - RULE-SET,Gemini,Google
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Reddit,MyList
+  - RULE-SET,USAProxies,MyList
+  - RULE-SET,GitHub,Proxy
+  - RULE-SET,OneDrive,Proxy
+  - RULE-SET,Microsoft,Proxy
+  - RULE-SET,StreamingSE,StreamingSE
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,ProxyMedia,Youtube
+  - RULE-SET,ProxyList,Proxy
+  - RULE-SET,ProxyLite,Proxy
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
