@@ -41,7 +41,7 @@ proxy-providers:
     type: http
     url: "https://sub1.sntp.me/baseStr?token=d7b0815fd5384c102b389b49d5c88909&sign=af128ad4479ac8a66cc2db9b33ae3eed&ts=1770744689&nonce=bb2dd0c11453cc1a721a157078869b4c&v=v2&timestamp=127420"
     interval: 3600
-    proxy: Proxy
+    proxy: DIRECT
     health-check:
       enable: true
       interval: 600
