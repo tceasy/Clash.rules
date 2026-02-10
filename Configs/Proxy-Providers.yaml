@@ -11,10 +11,14 @@ proxy-providers:
     url: "https://4983c690743e.ai-163cdn.com/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=false&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8192%26token%3DChPNQ9ngooXT%26sip002%3D1"
     interval: 3600
     path: ./provider.yaml
+    proxy: DIRECT
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      timeout: 5000
+      lazy: true
+      expected-status: 204
     # 节点重命名和过滤在这里实现
     override: # 覆写节点加载时的一些配置项
       # skip-cert-verify: true
@@ -37,10 +41,14 @@ proxy-providers:
     type: http
     url: "https://sub1.sntp.me/baseStr?token=d7b0815fd5384c102b389b49d5c88909&sign=af128ad4479ac8a66cc2db9b33ae3eed&ts=1770744689&nonce=bb2dd0c11453cc1a721a157078869b4c&v=v2&timestamp=127420"
     interval: 3600
+    proxy: Proxy
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
+      timeout: 5000
+      lazy: true
+      expected-status: 204
     # 节点重命名和过滤在这里实现
     override: # 覆写节点加载时的一些配置项
       skip-cert-verify: true
@@ -298,7 +306,6 @@ rule-providers:
     path: ./ruleset/ProxyLite.list
     format: text
     proxy: Proxy
-  # 其他 Rule Provider 依此类推... (篇幅原因省略部分)
 
 rules:
   - RULE-SET,REJECT,REJECT
