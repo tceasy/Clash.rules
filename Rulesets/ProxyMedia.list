@@ -1,3 +1,11 @@
+# Plex
+DOMAIN-SUFFIX,claspws.tv
+DOMAIN-SUFFIX,plex.bz
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.services
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plexapp.com
+
 # Pornhub
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
@@ -30,5 +38,6 @@ DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,twitch-ext.rootonline.de
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
+
 
 
