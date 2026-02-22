@@ -1,6 +1,36 @@
 # Prevent Telegram from loading content
 IP-CIDR,95.161.76.100/31,no-resolve
 
+# WebRTC 完整阻断
+DOMAIN-KEYWORD,stun
+DOMAIN-KEYWORD,turn
+DOMAIN-SUFFIX,stun.l.google.com
+DOMAIN-SUFFIX,stun1.l.google.com
+DOMAIN-SUFFIX,stun2.l.google.com
+DOMAIN-SUFFIX,stun3.l.google.com
+DOMAIN-SUFFIX,stun4.l.google.com
+DOMAIN-SUFFIX,stun.services.mozilla.com
+DOMAIN-SUFFIX,global.turn.twilio.com
+DOMAIN-SUFFIX,turn.twilio.com
+DOMAIN-SUFFIX,stun.cloudflare.com
+DOMAIN-SUFFIX,turn.speed.cloudflare.com
+DOMAIN-SUFFIX,stun.stunprotocol.org
+DOMAIN-SUFFIX,stun.ekiga.net
+DOMAIN-SUFFIX,stun.ideasip.com
+DOMAIN-SUFFIX,stun.schlund.de
+DOMAIN-SUFFIX,stun.voiparound.com
+DOMAIN-SUFFIX,stun.voipbuster.com
+DOMAIN-SUFFIX,stun.voipstunt.com
+DOMAIN-SUFFIX,stun.voipcheap.com
+DOMAIN-SUFFIX,stun.12voip.com
+DOMAIN-SUFFIX,numb.viagenie.ca
+DOMAIN-SUFFIX,turn.numb.viagenie.ca
+DOMAIN-SUFFIX,freestun.net
+DOMAIN-SUFFIX,freeturn.net
+DOMAIN-SUFFIX,webrtc.ecl.ntt.com
+DOMAIN-SUFFIX,turnix.io
+DOMAIN-SUFFIX,xirsys.com
+
 # Reject list from V2TUN
 DOMAIN-KEYWORD,adservice
 DOMAIN,ad.51wnl-cq.com
@@ -635,8 +665,3 @@ DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
-
-
-
-
-
