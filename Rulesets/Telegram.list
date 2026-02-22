@@ -40,6 +40,7 @@ IP-CIDR6,2001:b28:f23c::/47,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
 IP-CIDR6,2a0a:f280::/29,no-resolve
+GEOIP,telegram,no-resolve
 PROCESS-NAME,nekox.messenger
 PROCESS-NAME,org.telegram.messenger
 PROCESS-NAME,telegram-desktop
