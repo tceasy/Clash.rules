@@ -3,7 +3,6 @@ DOMAIN-SUFFIX,amysecure.com
 DOMAIN-SUFFIX,bimmerpost.com
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,bitwarden.net
-DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,sntp.uk
 DOMAIN-SUFFIX,xbimmers.com
@@ -262,3 +261,4 @@ IP-CIDR,5.28.195.163/32,no-resolve
 IP-CIDR,5.28.195.205/32,no-resolve
 IP-CIDR,5.28.195.37/32,no-resolve
 PROCESS-NAME,com.amazon.avod.thirdpartyclient
+
