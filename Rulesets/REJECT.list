@@ -31,7 +31,34 @@ DOMAIN-SUFFIX,webrtc.ecl.ntt.com
 DOMAIN-SUFFIX,turnix.io
 DOMAIN-SUFFIX,xirsys.com
 
-# Reject list from V2TUN
+# SNTP
+DOMAIN-KEYWORD,admarvel
+DOMAIN-KEYWORD,admaster
+DOMAIN-KEYWORD,adsage
+DOMAIN-KEYWORD,adsmogo
+DOMAIN-KEYWORD,adsrvmedia
+DOMAIN-KEYWORD,adwords
+DOMAIN-KEYWORD,domob
+DOMAIN-KEYWORD,duomeng
+DOMAIN-KEYWORD,dwtrack
+DOMAIN-KEYWORD,guanggao
+DOMAIN-KEYWORD,lianmeng
+DOMAIN-KEYWORD,mopub
+DOMAIN-KEYWORD,omgmta
+DOMAIN-KEYWORD,openx
+DOMAIN-KEYWORD,partnerad
+DOMAIN-KEYWORD,pingfore
+DOMAIN-KEYWORD,supersonicads
+DOMAIN-KEYWORD,uedas
+DOMAIN-KEYWORD,umeng
+DOMAIN-KEYWORD,usage
+DOMAIN-KEYWORD,wlmonitor
+DOMAIN-KEYWORD,zjtoolbar
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,mmstat.com
+DOMAIN-SUFFIX,vungle.com
+
+# V2TUN
 DOMAIN-KEYWORD,adservice
 DOMAIN,ad.51wnl-cq.com
 DOMAIN,adextra.51wnl-cq.com
