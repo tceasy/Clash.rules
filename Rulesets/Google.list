@@ -1,13 +1,19 @@
 # Apple Proxy
 DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-ready.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
 DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,hls-amt.itunes.apple.com
 DOMAIN-SUFFIX,hls.itunes.apple.com
 DOMAIN-SUFFIX,ocsp.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,api-glb-sea.smoot.apple.com
 DOMAIN,api.smoot.apple.com
 DOMAIN,apple.comscoreresearch.com
