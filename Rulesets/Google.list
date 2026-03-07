@@ -1,6 +1,4 @@
 # Apple
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,certs.apple.com
@@ -26,7 +24,6 @@ DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
 DOMAIN-SUFFIX,gspe79-cn-ssl.ls.apple.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,icloud-cdn.icloud.com.akadns.net
-DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,init-kt.apple.com
 DOMAIN-SUFFIX,init-p01md-lb.push-apple.com.akadns.net
 DOMAIN-SUFFIX,init-p01md.apple.com
@@ -36,7 +33,6 @@ DOMAIN-SUFFIX,init-s01st-lb.push-apple.com.akadns.net
 DOMAIN-SUFFIX,init-s01st.push.apple.com
 DOMAIN-SUFFIX,init.ess.apple.com
 DOMAIN-SUFFIX,ls.apple.com
-DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,ocsp.apple.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
 DOMAIN-SUFFIX,push.apple.com
