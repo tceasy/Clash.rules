@@ -24,8 +24,6 @@ DOMAIN,docs-assets.developer.apple.com
 DOMAIN,devstreaming-cdn.apple.com
 DOMAIN,devimages-cdn.apple.com
 DOMAIN,developer.apple.com
-DOMAIN,cvws.icloud-content.com
-DOMAIN,cdn.apple-cloudkit.com
 DOMAIN,books.itunes.apple.com
 DOMAIN,apple.comscoreresearch.com
 DOMAIN,api.smoot.apple.com
@@ -35,7 +33,6 @@ DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,hls.itunes.apple.com
 DOMAIN-SUFFIX,hls-amt.itunes.apple.com
 DOMAIN-SUFFIX,guzzoni.apple.com
-DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
 DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
