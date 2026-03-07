@@ -12,12 +12,15 @@ DOMAIN-SUFFIX,cn.apple.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,ls.apple.com.gw.apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,organicfruitapps.com
 DOMAIN,api.smoot.apple.cn
 DOMAIN,apple.comscoreresearch.com
 DOMAIN,appleintelligencefeedback.care.apple.com
 DOMAIN,gs-loc-cn.apple.com
+DOMAIN,ls.apple.com
+DOMAIN,music.apple.com
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/19,no-resolve
 IP-CIDR,144.178.36.0/22,no-resolve
