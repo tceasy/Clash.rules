@@ -1,9 +1,6 @@
 # Prevent Telegram from loading content
 IP-CIDR,95.161.76.100/31,no-resolve
 
-# Apple数据收集
-DOMAIN-SUFFIX,xp.apple.com
-
 # WebRTC 完整阻断
 DOMAIN-KEYWORD,stun
 DOMAIN-KEYWORD,turn
@@ -695,4 +692,5 @@ DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
+
 
