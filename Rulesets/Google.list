@@ -1,34 +1,41 @@
-# Apple News
+# Apple Proxy
+DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple.news
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
-DOMAIN,news-client-search.apple.com
-DOMAIN,news-client.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com
-
-# Apple Intelligence / Siri (针对部分被墙或锁区的 AI 接口)
-DOMAIN,guzzoni.apple.com
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
+DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+DOMAIN-SUFFIX,hls.itunes.apple.com
+DOMAIN-SUFFIX,ocsp.apple.com
+DOMAIN,api-glb-sea.smoot.apple.com
 DOMAIN,api.smoot.apple.com
-DOMAIN,smp-device-content.apple.com
-
-# 开发者服务 (由于国内解析时常抽风，建议走代理以保证稳定性)
+DOMAIN,apple.comscoreresearch.com
+DOMAIN,books.itunes.apple.com
+DOMAIN,cdn.apple-cloudkit.com
+DOMAIN,cvws.icloud-content.com
 DOMAIN,developer.apple.com
 DOMAIN,devimages-cdn.apple.com
-
-# Gemini
-DOMAIN-KEYWORD,colab
-DOMAIN-KEYWORD,developerprofiles
-DOMAIN-KEYWORD,generativelanguage
-DOMAIN-SUFFIX,apis.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN,ai.google.dev
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-DOMAIN,makersuite.google.com
+DOMAIN,devstreaming-cdn.apple.com
+DOMAIN,docs-assets.developer.apple.com
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,guzzoni.apple.com
+DOMAIN,hls-svod.itunes.apple.com
+DOMAIN,itunes.apple.com
+DOMAIN,js-cdn.music.apple.com
+DOMAIN,lookup-api.apple.com
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask.icloud.com
+DOMAIN,news-assets.apple.com
+DOMAIN,news-client-search.apple.com
+DOMAIN,news-client.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+DOMAIN,sandbox.itunes.apple.com
+DOMAIN,smp-device-content.apple.com
+DOMAIN,testflight.apple.com
+PROCESS-NAME,LookupViewService
 
 # Google
 DOMAIN-KEYWORD,appspot
