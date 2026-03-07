@@ -1,6 +1,7 @@
 # Apple
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.news
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,certs.apple.com
 DOMAIN-SUFFIX,cn-ssl.ls.apple.com
@@ -40,7 +41,17 @@ DOMAIN-SUFFIX,ocsp.apple.com
 DOMAIN-SUFFIX,push-apple.com.akadns.net
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,valid.apple.com
+DOMAIN,api.smoot.apple.com
+DOMAIN,developer.apple.com
+DOMAIN,devimages-cdn.apple.com
 DOMAIN,gs-loc.apple.com
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,guzzoni.apple.com
+DOMAIN,news-client-search.apple.com
+DOMAIN,news-client.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+DOMAIN,smp-device-content.apple.com
 
 # Gemini
 DOMAIN-KEYWORD,colab
