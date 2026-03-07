@@ -51,9 +51,7 @@ DOMAIN,ns.itunes.apple.com
 DOMAIN,mvod.itunes.apple.com
 DOMAIN,mesu.apple.com.mwcname.com
 DOMAIN,mesu.apple.com.akadns.net
-DOMAIN,mesu.apple.com
 DOMAIN,mesu-lb.apple.com.akadns.net
-DOMAIN,ls.apple.com
 DOMAIN,itunes.apple.com
 DOMAIN,iphonesubmissions.g.aaplimg.com
 DOMAIN,iphonesubmissions.apple.com.mwcname.com
@@ -66,8 +64,6 @@ DOMAIN,ig.apple.com
 DOMAIN,idmsa.apple.com
 DOMAIN,gsa.apple.com
 DOMAIN,gs.apple.com
-DOMAIN,gs-loc.apple.com
-DOMAIN,gs-loc-cn.apple.com
 DOMAIN,gnf-mr.apple.com
 DOMAIN,gnf-mdn.apple.com
 DOMAIN,gg.g.aaplimg.com
@@ -84,7 +80,6 @@ DOMAIN,gdmf-cdn.origin-apple.com.akadns.net
 DOMAIN,gdmf-cdn.apple.com.akadns.net
 DOMAIN,fmipmobile.icloud.com
 DOMAIN,fmfmobile.icloud.com
-DOMAIN,configuration.apple.com
 DOMAIN,captive.apple.com
 DOMAIN,audio.itunes.apple.com
 DOMAIN,audio-ssl.itunes.apple.com
@@ -339,5 +334,6 @@ DOMAIN-SUFFIX,a5.mzstatic.com
 DOMAIN-SUFFIX,a4.mzstatic.com
 DOMAIN-SUFFIX,a3.mzstatic.com
 DOMAIN-SUFFIX,a2.mzstatic.com
+DOMAIN-SUFFIX,a1.mzstatic.com
 DOMAIN-SUFFIX,a1.mzstatic.com
 DOMAIN-KEYWORD,icloud.com.akadns.net
