@@ -3,7 +3,6 @@ PROCESS-NAME,LookupViewService
 DOMAIN,uts-api.itunes.apple.com
 DOMAIN,tv.applemusic.com
 DOMAIN,testflight.apple.com
-DOMAIN,smp-device-content.apple.com
 DOMAIN,sandbox.itunes.apple.com
 DOMAIN,play-edge.itunes.apple.com
 DOMAIN,np-edge.itunes.apple.com
@@ -17,12 +16,9 @@ DOMAIN,mask-h2.icloud.com
 DOMAIN,mask-api.icloud.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,js-cdn.music.apple.com
-DOMAIN,itunes.apple.com
 DOMAIN,hls-svod.itunes.apple.com
 DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,docs-assets.developer.apple.com
-DOMAIN,devstreaming-cdn.apple.com
-DOMAIN,devimages-cdn.apple.com
 DOMAIN,developer.apple.com
 DOMAIN,books.itunes.apple.com
 DOMAIN,apple.comscoreresearch.com
@@ -32,7 +28,6 @@ DOMAIN-SUFFIX,tv.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN-SUFFIX,hls.itunes.apple.com
 DOMAIN-SUFFIX,hls-amt.itunes.apple.com
-DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,cp4.cloudflare.com
 DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
