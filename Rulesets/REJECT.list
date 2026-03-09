@@ -33,11 +33,9 @@ DOMAIN-SUFFIX,xirsys.com
 
 # SNTP
 DOMAIN-KEYWORD,admarvel
-DOMAIN-KEYWORD,admaster
 DOMAIN-KEYWORD,adsage
 DOMAIN-KEYWORD,adsmogo
 DOMAIN-KEYWORD,adsrvmedia
-DOMAIN-KEYWORD,adwords
 DOMAIN-KEYWORD,domob
 DOMAIN-KEYWORD,duomeng
 DOMAIN-KEYWORD,dwtrack
@@ -50,7 +48,6 @@ DOMAIN-KEYWORD,partnerad
 DOMAIN-KEYWORD,pingfore
 DOMAIN-KEYWORD,supersonicads
 DOMAIN-KEYWORD,uedas
-DOMAIN-KEYWORD,umeng
 DOMAIN-KEYWORD,usage
 DOMAIN-KEYWORD,wlmonitor
 DOMAIN-KEYWORD,zjtoolbar
@@ -95,10 +92,6 @@ DOMAIN,nadvideo2.baidu.com
 DOMAIN,nsclick.baidu.com
 DOMAIN,t7z.cupid.iqiyi.com
 DOMAIN,t7z.cupid.ptqy.gitv.tv
-IP-CIDR,101.227.97.240/32,no-resolve
-IP-CIDR,101.227.200.11/32,no-resolve
-IP-CIDR,101.227.200.28/32,no-resolve
-IP-CIDR,124.192.153.42/32,no-resolve
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN,ad.toutiao.com
@@ -318,8 +311,6 @@ DOMAIN,appcloud2.in.zhihu.com
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
 DOMAIN,118.89.204.198
-IP-CIDR,118.89.204.198/32,no-resolve
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 DOMAIN,apppv.zol.com.cn
 DOMAIN,pvnapp.zol.com.cn
 
@@ -692,5 +683,3 @@ DOMAIN-SUFFIX,adse.ximalaya.com
 DOMAIN-SUFFIX,linkeye.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
-
-
