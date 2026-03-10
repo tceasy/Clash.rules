@@ -1,3 +1,6 @@
+DOMAIN-SUFFIX,nexitally.com
+DOMAIN-SUFFIX,sntp.uk
+
 # Plex
 DOMAIN-SUFFIX,claspws.tv
 DOMAIN-SUFFIX,plex.bz
@@ -46,6 +49,7 @@ DOMAIN-SUFFIX,ttvnw.net
 DOMAIN-SUFFIX,twitch-ext.rootonline.de
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
+
 
 
 
