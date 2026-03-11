@@ -6,6 +6,9 @@ DOMAIN-SUFFIX,stentvessel.shop
 DOMAIN-SUFFIX,to-ytoo.xyz
 DOMAIN-SUFFIX,y-too.net
 
+# Homebrew
+DOMAIN,brew.sh
+DOMAIN,formulae.brew.sh
 # Github
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
@@ -189,3 +192,4 @@ DOMAIN-KEYWORD,onedrive
 DOMAIN-KEYWORD,skydrive
 PROCESS-NAME,OneDrive
 PROCESS-NAME,OneDriveUpdater
+
