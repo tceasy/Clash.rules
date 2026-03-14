@@ -10,8 +10,12 @@ DOMAIN-SUFFIX,y-too.net
 DOMAIN,brew.sh
 DOMAIN,formulae.brew.sh
 # Github
+DOMAIN,auth.unraid.net
+DOMAIN,connect.unraid.net
 DOMAIN-SUFFIX,atom.io
 DOMAIN-SUFFIX,dependabot.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,gcr.io
 DOMAIN-SUFFIX,ghcr.io
 DOMAIN-SUFFIX,git.io
 DOMAIN-SUFFIX,github-atom-io-herokuapp-com.freetls.fastly.net
@@ -31,15 +35,20 @@ DOMAIN-SUFFIX,githubpreview.dev
 DOMAIN-SUFFIX,githubstatus.com
 DOMAIN-SUFFIX,githubuniverse.com
 DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,linuxserver.io
+DOMAIN-SUFFIX,lscr.io
 DOMAIN-SUFFIX,myoctocat.com
 DOMAIN-SUFFIX,npm.community
 DOMAIN-SUFFIX,npmjs.com
 DOMAIN-SUFFIX,npmjs.org
 DOMAIN-SUFFIX,opensource.guide
+DOMAIN-SUFFIX,quay.io
 DOMAIN-SUFFIX,rawgit.com
 DOMAIN-SUFFIX,rawgithub.com
 DOMAIN-SUFFIX,repo.new
 DOMAIN-SUFFIX,thegithubshop.com
+DOMAIN-SUFFIX,unraid.com
+DOMAIN-SUFFIX,unraid.net
 DOMAIN-KEYWORD,github
 
 # Microsoft
