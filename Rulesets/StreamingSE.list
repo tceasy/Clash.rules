@@ -1,3 +1,34 @@
+
+# Plex
+DOMAIN-SUFFIX,claspws.tv
+DOMAIN-SUFFIX,plex.bz
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.services
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plexapp.com
+
+# Porn
+DOMAIN-SUFFIX,8teenxxx.com
+DOMAIN-SUFFIX,chaturbate.com
+DOMAIN-SUFFIX,javbus.com
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+DOMAIN-SUFFIX,rdtcdn.com
+DOMAIN-SUFFIX,redtube.com
+DOMAIN-SUFFIX,rou.video
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,t66y.com
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,xnxx-cdn.com
+DOMAIN-SUFFIX,xnxx.com
+DOMAIN-SUFFIX,xvideos-cdn.com
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,ypncdn.com
+DOMAIN-KEYWORD,porn
+DOMAIN-REGEX,^v\.rn\d+\.xyz$
+
 # Emby
 IP-CIDR,83.147.61.152/32,no-resolve
 IP-CIDR,202.61.255.248/32
@@ -130,3 +161,19 @@ DOMAIN-SUFFIX,123456.al
 DOMAIN-SUFFIX,023168.xyz
 DOMAIN-KEYWORD,magpie
 DOMAIN-KEYWORD,emby
+
+# Apple TV+
+DOMAIN-SUFFIX,tv.apple.com
+DOMAIN,hls.itunes.apple.com
+DOMAIN,hls-amt.itunes.apple.com
+DOMAIN,play-edge.itunes.apple.com
+DOMAIN,np-edge.itunes.apple.com
+DOMAIN,tvtheme.apple.com
+# Twitch
+DOMAIN-KEYWORD,ttvnw
+DOMAIN-SUFFIX,ext-twitch.tv
+DOMAIN-SUFFIX,jtvnw.net
+DOMAIN-SUFFIX,ttvnw.net
+DOMAIN-SUFFIX,twitch-ext.rootonline.de
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
