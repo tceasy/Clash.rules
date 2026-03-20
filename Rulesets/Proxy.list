@@ -1,3 +1,4 @@
+SRC-IP-CIDR,192.168.86.1/32
 # MyList
 DOMAIN-SUFFIX,amysecure.com
 DOMAIN-SUFFIX,nexitally.com
