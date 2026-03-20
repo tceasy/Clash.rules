@@ -6,14 +6,13 @@ DOMAIN-SUFFIX,infinitynewtab.com
 DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
 DOMAIN-SUFFIX,openwrt.ai
-DOMAIN-SUFFIX,parsec.app
-DOMAIN-SUFFIX,parsecusercontent
 DOMAIN-SUFFIX,pianyuan.org
 DOMAIN-SUFFIX,qupu123.com
 DOMAIN-SUFFIX,tutu.pm
 DOMAIN-KEYWORD,gying
+PROCESS-NAME,OneDrive
 PROCESS-NAME,mailbird.exe
-PROCESS-NAME,parsec
+PROCESS-NAME,Moonlight
 
 # EMAIL
 DST-PORT,25
