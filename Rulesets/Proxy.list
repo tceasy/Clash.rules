@@ -3,9 +3,6 @@ SRC-IP-CIDR,192.168.86.1/32
 DOMAIN-SUFFIX,amysecure.com
 DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,sntp.uk
-DOMAIN-SUFFIX,stentvessel.shop
-DOMAIN-SUFFIX,to-ytoo.xyz
-DOMAIN-SUFFIX,y-too.net
 
 # Homebrew
 DOMAIN,formulae.brew.sh
