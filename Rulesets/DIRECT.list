@@ -1,18 +1,18 @@
 # MyList
 DOMAIN-SUFFIX,chiphell.com
 DOMAIN-SUFFIX,delldisplaymanagerwindows.com
-DOMAIN-SUFFIX,filejin.ru
 DOMAIN-SUFFIX,infinitynewtab.com
 DOMAIN-SUFFIX,laomo.me
 DOMAIN-SUFFIX,mpyit.com
 DOMAIN-SUFFIX,openwrt.ai
 DOMAIN-SUFFIX,pianyuan.org
 DOMAIN-SUFFIX,qupu123.com
-DOMAIN-SUFFIX,tutu.pm
-DOMAIN-KEYWORD,gying
 PROCESS-NAME,OneDrive
-PROCESS-NAME,mailbird.exe
 PROCESS-NAME,Moonlight
+# gying
+DOMAIN,www.xn--wcv59z.com
+DOMAIN-SUFFIX,tutu.pm
+DOMAIN-SUFFIX,filejin.ru
 
 # EMAIL
 DST-PORT,25
