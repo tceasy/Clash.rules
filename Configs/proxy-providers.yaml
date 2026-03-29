@@ -1,336 +1,300 @@
-# 基础配置
+# ===================================================================================================================
+# 全局配置 (General configuration)
+# ===================================================================================================================
 mixed-port: 7890
 allow-lan: true
 mode: rule
 log-level: silent
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: firefox
+# keep-alive-idle: 600
+# keep-alive-interval: 15
+# disable-keep-alive: false
+skip-proxy:
+  - "*.crashlytics.com"
+  - "*.local"
+  - "<local>"
+  - "10.0.0.0/8"
+  - "127.0.0.1"
+  - "172.16.0.0/12"
+  - "192.168.0.0/16"
+  - "localhost"
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - RULE-SET:fake_ip_filter
+    - geosite:connectivity-check
+    - geosite:private
+    - geosite:tracker
+  default-nameserver: [223.5.5.5, 119.29.29.29]
+  nameserver: ['https://223.5.5.5/dns-query', 'https://119.29.29.29/dns-query']
+  fallback: [8.8.8.8, 8.8.4.4, 1.1.1.1]
+  fallback-filter: { geoip: true, geoip-code: CN, geosite: [gfw], ipcidr: [240.0.0.0/4] }
 
-# 1. 代理集合 (取代原本的订阅链接)
+# ===================================================================================================================
+# 1. 代理集合 (Proxy Providers)
+# ===================================================================================================================
+NodeParam: &NodeParam
+  {type: http, interval: 86400, proxy: DIRECT}
+
 proxy-providers:
   YToo:
-    type: http
-    url: "https://4983c690743e.ai-163cdn.com/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=false&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8192%26token%3DChPNQ9ngooXT%26sip002%3D1"
-    interval: 86400
-    path: ./provider.yaml
-    proxy: DIRECT
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-      timeout: 5000
-      lazy: true
-      expected-status: 204
-    # 节点重命名和过滤在这里实现
-    override: # 覆写节点加载时的一些配置项
-      # skip-cert-verify: true
-      # udp: true
-      # down: "50 Mbps"
-      # up: "10 Mbps"
-      # dialer-proxy: proxy
-      # interface-name: tailscale0
-      # routing-mark: 233
-      # ip-version: ipv4-prefer
-      # additional-prefix: "[provider1]"
-      # additional-suffix: "test"
-      # # 名字替换，支持正则表达式
-      proxy-name:
-        - pattern: "专线 "
-          target: ""
-      #   - pattern: "IPLC-(.*?)倍"
-      #     target: "iplc x $1"
-  SNTP:
-    type: http
-    url: "https://sub1.sntp.me/baseStr?token=d7b0815fd5384c102b389b49d5c88909&sign=af128ad4479ac8a66cc2db9b33ae3eed&ts=1770744689&nonce=bb2dd0c11453cc1a721a157078869b4c&v=v2&timestamp=127420"
-    interval: 86400
-    proxy: DIRECT
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
-      timeout: 5000
-      lazy: true
-      expected-status: 204
-    # 节点重命名和过滤在这里实现
-    override: # 覆写节点加载时的一些配置项
-      skip-cert-verify: true
+    <<: *NodeParam
+    url: "https://4983c690743e.ai-163cdn.com/sub?target=clash&new_name=true&emoji=true&clash.doh=true&filename=YToo_SS&udp=false&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8192%26token%3DK0GzZCcktwBnyNAbeyVC%26sip002%3D1"
+    path: ./YToo.yaml
+    override:
       udp: true
-      # down: "50 Mbps"
-      # up: "10 Mbps"
-      # dialer-proxy: proxy
-      # interface-name: tailscale0
-      # routing-mark: 233
-      # ip-version: ipv4-prefer
-      # additional-prefix: "[provider1]"
-      # additional-suffix: "test"
-      # # 名字替换，支持正则表达式
+      proxy-name:
+      - pattern: "专线 "
+        target: ""
+  SNTP:
+    <<: *NodeParam
+    url: "https://sub1.sntp.me/baseStr?token=f41c4ec690f5338482c6945569611ca4&sign=7802f86e033d8d39ad2da3a42ef4026d&ts=1771147163&nonce=03f2004bb694db67999609ee6dae9ad1&v=v2&timestamp=127420"
+    path: ./SNTP.yaml
+    override:
+      udp: true
+      skip-cert-verify: true
 
-# 2. 策略组 (保持你原有的逻辑)
+# ===================================================================================================================
+# 2. 策略组 (Proxy Groups)
+# ===================================================================================================================
+consistent-hashing: &consistent-hashing
+  {type: load-balance, url: "https://cp.cloudflare.com/generate_204", interval: 300, disable-udp: true, lazy: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3}
+round-robin: &round-robin
+  {type: load-balance, url: "https://cp.cloudflare.com/generate_204", interval: 300, disable-udp: false, lazy: false, strategy: round-robin, timeout: 2000, max-failed-times: 3}
+url-test: &url-test
+  {type: url-test, url: "https://cp.cloudflare.com/generate_204", interval: 180, tolerance: 50, disable-udp: false, lazy: true, timeout: 2000, max-failed-times: 3}
+
 proxy-groups:
+  # ---------------- 顶层：流量分发总组 ----------------
   - name: Proxy
     type: select
-    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 🌏SNTP Asia, 🌎SNTP US]
-
-  - name: Netflix
-    type: select
-    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
-
+    proxies: [🇭🇰 HK, 🇹🇼 TW, 🇸🇬 SG, 🇺🇸 US]
   - name: Google
     type: select
-    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 🌏SNTP Asia]
-
+    proxies: [🇹🇼 TW, 🇸🇬 SG, 🇺🇸 US]
   - name: Youtube
     type: select
-    proxies: [🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
-
+    proxies: [🎬 0.2x, 📺 MediaSE, 🇸🇬 SG, 🇺🇸 US]
   - name: Telegram
     type: select
-    proxies: [🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia]
-
+    proxies: [🎬 0.2x, 📺 MediaSE, 🇸🇬 SG, 🇺🇸 US]
   - name: StreamingSE
     type: select
-    proxies: [DIRECT, 🇭🇰HK, 🇸🇬SG, 🇺🇸US, 📺MediaSE, 🌏SNTP Asia, 🌎SNTP US]
-
+    proxies: [🎬 0.2x, 📺 MediaSE, 🇸🇬 SG, 🇺🇸 US, DIRECT]
   - name: MyList
     type: select
-    proxies: [🇺🇸US, 🌎SNTP US]
+    proxies: [🇺🇸 US]
+    hidden: true
 
-  # --- 自动筛选子组 ---
-  - name: 🇭🇰HK
-    type: select
-    use:
-      - YToo
-    filter: "(?=.*(标准 香|高级 香|日用 香))^((?!(日用|台|韩|新|美|阿|德|游戏|澳)).)*$"
+  # ---------------- 地区层：负载均衡 (Load-Balance) ----------------
+  # 这里的 url 决定了当某家服务商（子组）整体挂掉时，是否剔除它
+  - name: 🇭🇰 HK
+    <<: *consistent-hashing
+    proxies:
+      - 🟢 YToo-HK
+      - 🔵 SNTP-HK
+    hidden: true
 
-  - name: 🇸🇬SG
-    type: select
-    use:
-      - YToo
-    filter: "(?=.*(新|狮|獅|SG-|(?i)Singapore))^((?!(日用|港|台|韩|美)).)*$"
+  - name: 🇹🇼 TW
+    <<: *consistent-hashing
+    proxies:
+      - 🟢 YToo-TW
+      - 🔵 SNTP-TW
+    hidden: true
 
-  - name: 🇺🇸US
-    type: fallback
-    use:
-      - YToo
-    filter: "(?=.*(高级 美|American))^((?!(港|台|日|韩|新)).)*$"
-    url: "http://cp.cloudflare.com/generate_204"
-    interval: 300
-    tolerance: 150
+  - name: 🇸🇬 SG
+    <<: *consistent-hashing
+    proxies:
+      - 🟢 YToo-SG
+      - 🔵 SNTP-SG
+    hidden: true
 
-  - name: 📺MediaSE
-    type: select
-    use:
-      - YToo
-      - SNTP
-    filter: "(?=.*(0.2x|0.20x|日用))^((?!(韩|阿|德|DE|游戏|澳|特殊|购物|Ukraine|Malaysia|Nigeria|Pakistan|KR|TR)).)*$"
+  - name: 🇺🇸 US
+    <<: *consistent-hashing
+    proxies:
+      - 🟢 YToo-US
+      - 🔵 SNTP-US
+    hidden: true
 
-  - name: 🌏SNTP Asia
-    type: select
-    use:
-      - SNTP
-    filter: "(?=.*(2.00x))^((?!(日用|标准|高级|特殊|购物)).)*$"
+  - name: 📺 MediaSE
+    <<: *round-robin
+    proxies:
+      - 🟢 YToo-MediaSE
+      - 🔵 SNTP-MediaSE
+    hidden: true
 
-  - name: 🌎SNTP US
-    type: select
-    use:
-      - SNTP
-    filter: "(?=.*(US))^((?!(HK|SG|日用|标准|高级|特殊|购物)).)*$"
+  - name: 🎬 0.2x
+    <<: *round-robin
+    proxies:
+      - 🟢 YToo-0.2x
+      - 🔵 SNTP-0.2x
+    hidden: true
 
-# 3. 规则集 (保持你原有的规则路径)
+  # ---------------- 节点层：精选子组 (URL-Test) ----------------
+  # 这里的 url 负责在单个服务商内部挑出最快的节点
+  - name: 🟢 YToo-HK
+    use: [YToo]
+    filter: "^(?=.*(香港|HK))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-HK
+    use: [SNTP]
+    filter: "^(?=.*(香港|HK))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+
+  - name: 🟢 YToo-TW
+    use: [YToo]
+    filter: "^(?=.*(台湾|TW|Taiwan))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-TW
+    use: [SNTP]
+    filter: "^(?=.*(台湾|TW|Taiwan))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+
+  - name: 🟢 YToo-SG
+    use: [YToo]
+    filter: "^(?=.*(新|SG|狮城|Singapore))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-SG
+    use: [SNTP]
+    filter: "^(?=.*(新|SG|狮城|Singapore))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+
+  - name: 🟢 YToo-US
+    use: [YToo]
+    filter: "(?=.*(美|US|America|United States))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-US
+    use: [SNTP]
+    filter: "(?=.*(美|US|America|United States))(?!.*(0.2)).*$"
+    hidden: true
+    <<: *url-test
+
+  - name: 🟢 YToo-MediaSE
+    use: [YToo]
+    filter: "^(?=.*(新|SG|狮城|Singapore))(?!.*(日用|高级|2.00x|节点)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-MediaSE
+    use: [SNTP]
+    filter: "^(?=.*(新|SG|狮城|Singapore))(?!.*(日用|高级|2.00x|节点)).*$"
+    hidden: true
+    <<: *url-test
+
+  - name: 🟢 YToo-0.2x
+    use: [YToo]
+    filter: "^(?=.*(日用|0.20x))(?!.*(Malaysia|DE|TR|Nigeria|Ukraine|Pakistan|美国|US)).*$"
+    hidden: true
+    <<: *url-test
+  - name: 🔵 SNTP-0.2x
+    use: [SNTP]
+    filter: "^(?=.*(日用|0.20x))(?!.*(Malaysia|DE|TR|Nigeria|Ukraine|Pakistan|美国|US)).*$"
+    hidden: true
+    <<: *url-test
+  # ---------------- 备用层：手动切换 (Select) ----------------
+#  - name: 🌎 Free
+#    type: select
+#    exclude-filter: "流量|重置|到期|Haruka|Yoo|tw|哈基猫|宽$"
+#    use: [Free, Anycloud]
+
+# ===================================================================================================================
+# 3. 规则集 (Rule Providers)
+# ===================================================================================================================
+classical_text: &classical {type: http, behavior: classical, interval: 86400, format: text, proxy: Proxy}
+domain_text: &domain {type: http, behavior: domain, interval: 86400, format: text, proxy: Proxy}
+domain_mrs: &domain_mrs {type: http, behavior: domain, interval: 86400, format: mrs, proxy: Proxy}
+ipcidr_mrs: &ipcidr_mrs {type: http, behavior: ipcidr, interval: 86400, format: mrs, proxy: Proxy}
+
 rule-providers:
-  REJECT:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/REJECT.list"
-    path: ./ruleset/REJECT.list
-    format: text
-    proxy: Proxy
+  fake_ip_filter:
+    <<: *domain_mrs
+    url: "https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/mihomo-ruleset/fakeip-filter.mrs"
+  geosite_Youtube:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo-lite/geosite/youtube.mrs"
+  geosite_Gemini:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google-gemini.mrs"
+  geosite_Google:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"
+#  geoip_Google:
+#    <<: *ipcidr_mrs
+#    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"
+  geosite_Telegram:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"
+  geoip_Telegram:
+    <<: *ipcidr_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"
+#  geosite_Paypal:
+#    <<: *domain_mrs
+#    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/paypal.mrs"
+  geosite_cn:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cn.mrs"
+  geoip_cn:
+    <<: *ipcidr_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/cn.mrs"
+  geosite_gfw:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/gfw.mrs"
+  cdn_domainset:
+    <<: *domain
+    url: "https://ruleset.skk.moe/Clash/domainset/cdn.txt"
+  cdn_non_ip:
+    <<: *classical
+    url: "https://ruleset.skk.moe/Clash/non_ip/cdn.txt"
+  geosite_Microsoft:
+    <<: *domain_mrs
+    url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/microsoft.mrs"
+  Proxy:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Proxy.list"
   AppleCN:
-    behavior: classical
-    interval: 600
-    type: http
+    <<: *classical
     url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/AppleCN.list"
-    path: ./ruleset/AppleCN.list
-    format: text
-    proxy: Proxy
-  JD:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/JingDong/JingDong.list"
-    path: ./ruleset/JingDong.list
-    format: text
-    proxy: Proxy
-  Tencent:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Tencent/Tencent.list"
-    path: ./ruleset/Tencent.list
-    format: text
-    proxy: Proxy
-  Alibaba:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Alibaba/Alibaba.list"
-    path: ./ruleset/Alibaba.list
-    format: text
-    proxy: Proxy
-  Download:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Download/Download.list"
-    path: ./ruleset/Download.list
-    format: text
-    proxy: Proxy
   Direct:
-    behavior: classical
-    interval: 600
-    type: http
+    <<: *classical
     url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/DIRECT.list"
-    path: ./ruleset/DIRECT.list
-    format: text
-    proxy: Proxy
-
-  Youtube:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Youtube.list"
-    path: ./ruleset/Youtube.list
-    format: text
-    proxy: Proxy
-  Google:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Google.list"
-    path: ./ruleset/Google.list
-    format: text
-    proxy: Proxy
-  Gemini:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Gemini.list"
-    path: ./ruleset/Gemini.list
-    format: text
-    proxy: Proxy
-  Telegram:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Telegram.list"
-    path: ./ruleset/Telegram.list
-    format: text
-    proxy: Proxy
-
-  Reddit:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/Reddit/Reddit.list"
-    path: ./ruleset/Reddit.list
-    format: text
-    proxy: Proxy
-  USAProxies:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/USAProxies.list"
-    path: ./ruleset/USAProxies.list
-    format: text
-    proxy: Proxy
-  GitHub:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list"
-    path: ./ruleset/GitHub.list
-    format: text
-    proxy: Proxy
-  OneDrive:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/OneDrive.list"
-    path: ./ruleset/OneDrive.list
-    format: text
-    proxy: Proxy
-  Microsoft:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Microsoft.list"
-    path: ./ruleset/Microsoft.list
-    format: text
-    proxy: Proxy
+  USA:
+    <<: *classical
+    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/us-proxies.list"
   StreamingSE:
-    behavior: classical
-    interval: 600
-    type: http
+    <<: *classical
     url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/StreamingSE.list"
-    path: ./ruleset/StreamingSE.list
-    format: text
-    proxy: Proxy
-  Netflix:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Netflix.list"
-    path: ./ruleset/Netflix.list
-    format: text
-    proxy: Proxy
-  ProxyMedia:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/ProxyMedia.list"
-    path: ./ruleset/ProxyMedia.list
-    format: text
-    proxy: Proxy
-  ProxyList:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/Clash.rules/refs/heads/main/Rulesets/Proxylist.list"
-    path: ./ruleset/Proxylist.list
-    format: text
-    proxy: Proxy
-  ProxyLite:
-    behavior: classical
-    interval: 600
-    type: http
-    url: "https://raw.githubusercontent.com/tceasy/rule_script/refs/heads/master/rule/Clash/ProxyLite/ProxyLite.list"
-    path: ./ruleset/ProxyLite.list
-    format: text
-    proxy: Proxy
-  # 其他 Rule Provider 依此类推... (篇幅原因省略部分)
 
 rules:
-  - RULE-SET,REJECT,REJECT
-  - GEOIP,LAN,DIRECT
-  - RULE-SET,AppleCN,DIRECT
-  - RULE-SET,JD,DIRECT
-  - RULE-SET,Tencent,DIRECT
-  - RULE-SET,Alibaba,DIRECT
-  - RULE-SET,Download,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,Youtube,Youtube
-  - RULE-SET,Google,Google
-  - RULE-SET,Gemini,Google
-  - RULE-SET,Telegram,Telegram
-  - RULE-SET,Reddit,MyList
-  - RULE-SET,USAProxies,MyList
-  - RULE-SET,GitHub,Proxy
-  - RULE-SET,OneDrive,Proxy
-  - RULE-SET,Microsoft,Proxy
+  - RULE-SET,geosite_Youtube,Youtube
+  - RULE-SET,geosite_Gemini,Google
+  - RULE-SET,geosite_Google,Google
+#  - RULE-SET,geoip_Google,Google,no-resolve
+  - RULE-SET,geosite_Telegram,Telegram
+  - RULE-SET,geoip_Telegram,Telegram,no-resolve
+  - RULE-SET,cdn_non_ip,StreamingSE
+  - RULE-SET,cdn_domainset,StreamingSE
+  - RULE-SET,geosite_Microsoft,StreamingSE
+  - RULE-SET,Proxy,Proxy
+  - RULE-SET,USA,MyList
   - RULE-SET,StreamingSE,StreamingSE
-  - RULE-SET,Netflix,Netflix
-  - RULE-SET,ProxyMedia,Youtube
-  - RULE-SET,ProxyList,Proxy
-  - RULE-SET,ProxyLite,Proxy
-  - GEOSITE,CN,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxy
+#  - RULE-SET,geosite_Paypal,MyList
+  - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,geosite_cn,DIRECT
+  - RULE-SET,geosite_gfw,StreamingSE
+  - RULE-SET,geoip_cn,DIRECT,no-resolve
+  - MATCH,StreamingSE
