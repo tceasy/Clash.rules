@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,plex.services
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plexapp.com
+DST-PORT,32400
 
 # EMAIL
 DST-PORT,25
