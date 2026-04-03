@@ -14,6 +14,13 @@ PROCESS-NAME,Moonlight
 DOMAIN,www.xn--wcv59z.com
 DOMAIN-SUFFIX,tutu.pm
 DOMAIN-SUFFIX,filejin.ru
+# Plex
+DOMAIN-SUFFIX,claspws.tv
+DOMAIN-SUFFIX,plex.bz
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.services
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plexapp.com
 
 # EMAIL
 DST-PORT,25
