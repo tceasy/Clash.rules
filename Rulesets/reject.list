@@ -1,4 +1,5 @@
 DST-PORT,7300-7310,no-resolve
 DST-PORT,8000,no-resolve
 DOMAIN,ib.snssdk.com
+DOMAIN,log.snssdk.com
 DOMAIN,push-ads-cn.heytapmobi.com
